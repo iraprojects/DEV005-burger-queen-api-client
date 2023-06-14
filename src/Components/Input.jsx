@@ -9,7 +9,7 @@ export default function Input({ name, type, placeholder }) {
     return (
         <>
             <Field name={name} type={type} placeholder={placeholder} />
-            <ErrorMessage name={name} component='div' />
+            <ErrorMessage name={name} component='div' className='error-message' />
         </>
     );
 }

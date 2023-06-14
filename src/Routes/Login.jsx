@@ -7,8 +7,8 @@ import Buttons from '../Components/Button';
 import { Navigate } from 'react-router-dom';
 
 function Login() {
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [redirectToMesero, setRedirectToMesero] = useState(false);
+  const [redirectTo, setRedirectTo] = useState(false);
+  const [userRole, setUserRole] = useState('');
 
   const handleSubmit = async (values, { resetForm }) => {
     const { email, password } = values;
@@ -24,11 +24,11 @@ function Login() {
 
       if (response.ok) {
         const data = await response.json();
-        const token = data.accessToken;
-        console.log(token);
+        setUserRole(data.user.role);
+        /* const token = data.accessToken;
+        console.log(token); */
         resetForm();
-        // setIsAuthenticated(true);
-        setRedirectToMesero(true);
+        setRedirectTo(true);
       } else {
         if (response.status === 400) {
           console.error('Error: Se requiere correo y contraseña');
@@ -48,8 +48,10 @@ function Login() {
     password: Yup.string().required('Contraseña requerida'),
   });
 
-  if (redirectToMesero) {
-    return <Navigate to="/mesero" />;
+  if (redirectTo) {
+    if (userRole === 'admin') return <Navigate to="/mesero" />;
+    if (userRole === 'waiter') return <Navigate to="/mesero" />;
+    if (userRole === 'chef') return <Navigate to="/chef" />;
   }
 
   return (
