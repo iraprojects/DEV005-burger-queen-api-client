@@ -39,6 +39,7 @@ input {
   font-size:larger;
   border-style: none;
   border-bottom: solid;
+  outline: none;
 }
 
 .button-form {
