@@ -1,0 +1,98 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.logo {
+  height: 9em;
+  padding: 1.5em;
+  margin: 0%;
+  padding: 0%;
+  /* will-change: filter;
+  transition: filter 300ms; */
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+form {
+  margin-bottom: 20%;
+}
+
+.inputs-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d993;
+  border-radius: 40px;
+  padding: 5%;
+}
+
+input {
+  margin: 5%;
+  background-color: transparent;
+  color: black;
+  font-size:larger;
+  border-style: none;
+  border-bottom: solid;
+  outline: none;
+}
+
+.button-form {
+  margin-top: 5%;
+  width: 50%;
+}
+
+input::placeholder{
+  color: #424242;
+}
+
+.error-message {
+  color: #d42a2c;
+  font-weight:bolder;
+  font-size: small;
+  /* background-color: #f4b5b6; */
+}
+
+.link-out {
+  color: #424242;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #007965;
+  color: #FFFFFF;
+  left: 0;
+  text-align: center;
+  font-size: small;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
