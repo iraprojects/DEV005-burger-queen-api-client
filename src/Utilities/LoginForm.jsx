@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 // import Input from '../Components/Input';
