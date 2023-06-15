@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
@@ -47,19 +47,31 @@ input {
   width: 50%;
 }
 
-input::placeholde{
-  color: black;
+input::placeholder{
+  color: #424242;
+}
+
+.error-message {
+  color: #d42a2c;
+  font-weight:bolder;
+  font-size: small;
+  /* background-color: #f4b5b6; */
+}
+
+.link-out {
+  color: #424242;
+  font-weight: bold;
 }
 
 footer {
   background-color: #007965;
   color: #FFFFFF;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   left: 0;
   text-align: center;
   font-size: small;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 @keyframes logo-spin {
