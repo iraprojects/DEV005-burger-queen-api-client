@@ -18,7 +18,7 @@ function Login() {
     <>
       <Header />
       <LoginForm onSubmit={handleSubmit} />
-      <Footer />
+      <Footer text='Derechos reservados ® Burger Queen'/>
     </>
   );
 }

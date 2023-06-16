@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 // import App from './App.jsx'
 import App from './Routes/Login.jsx'
 import Mesero from './Routes/Mesero.jsx'
+import Chef from './Routes/Chef.jsx'
 import './index.css'
 import {createHashRouter, RouterProvider} from 'react-router-dom'
 
@@ -14,6 +15,10 @@ const router = createHashRouter([
   {
     path: '/mesero',
     element: <Mesero />
+  },
+  {
+    path: '/chef',
+    element: <Chef />
   }
 ])
 

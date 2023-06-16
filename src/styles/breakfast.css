@@ -1,0 +1,29 @@
+.gray-container {
+    background-color: #F0F0EF;
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    height: 25rem;
+    border-radius: 40px;
+    padding: 24px;
+}
+
+.container-h2 {
+    display: block;
+}
+
+.text-h2 {
+    font-size: x-large;
+}
+
+.text-food {
+    background-color: aqua;
+    width: 25%;
+    align-self: center;
+}
+
+.container-foodRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
