@@ -1,0 +1,61 @@
+header {
+    display: flex;
+    background-color: #007965;
+    color: #FFFFFF;
+    font-size: small;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#logoBurger {
+    display: flex;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+}
+
+#pLogo {
+   margin-left: -40%;
+}
+
+.logoUser {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.pUser {
+    text-align: right;
+}
+
+.orders{
+    display: flex;
+    flex-direction: row;
+    background-color: #D9D9D9;
+    justify-content: space-between;
+    border-radius: 40px;
+}
+
+.pOrders {
+    color: #0000;
+    justify-content: space-between;
+}
+
+.titulOrders{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+}

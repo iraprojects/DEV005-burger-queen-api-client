@@ -1,8 +1,8 @@
-export default function Footer() { 
+export default function Footer({text}) { 
 
     return <>
       <footer>
-        <p>Derechos reservados ® Burger Queen</p>
+        <p>{text}</p>
       </footer>
     </>
 }
