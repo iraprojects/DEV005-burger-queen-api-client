@@ -1,7 +1,7 @@
 
-export default function Buttons({onClick, text}) { 
+export default function Buttons({onClick, text, id}) { 
 
     return <>
-    <button className='button-form' type="submit" onClick={onClick}>{text}</button>
+    <button className='button-form' id={`${id}`} type="submit" onClick={onClick}>{text}</button>
     </>
 }

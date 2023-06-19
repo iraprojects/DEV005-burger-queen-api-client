@@ -1,9 +1,21 @@
-export default function FoodRow({text, price}) {
+import handleInputChange from "../Utilities/InputValidation";
+
+export default function FoodRow({ text, price }) {
+    const handleChange = (e) => {
+        handleInputChange(e);
+    };
     return (
         <>
-            <p className="text-food">{text}</p>
-            <p className="text-food">{price}</p>
-            <input type="number" className="text-food" id="amount"/>
+            <div className='container-foodRow'>
+                <input type="text" className="text-food" value={text} readOnly />
+                <input type="text" className="text-food" id="price" value={price} readOnly />
+                <input 
+                    type="number" 
+                    className="text-food camount" 
+                    onInput={handleChange}
+                    id="amount" 
+                    min="0" max="20" />
+            </div>
         </>
     );
 }
