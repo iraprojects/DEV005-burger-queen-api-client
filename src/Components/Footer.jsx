@@ -1,8 +1,8 @@
-export default function Footer({text}) { 
+export default function Footer({text, otherClass}) { 
 
     return <>
       <footer>
-        <p>{text}</p>
+        <p className={otherClass}>{text}</p>
       </footer>
     </>
 }
