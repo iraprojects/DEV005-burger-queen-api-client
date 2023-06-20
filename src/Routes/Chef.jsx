@@ -2,6 +2,7 @@
 import "../styles/cheforders.css";
 import Top from "../Components/Top";
 import Orders from "../Components/Orders";
+import TitleOrders from "../Components/TitleOrders";
 import Footer from "../Components/Footer";
 import Buttons from "../Components/Button";
 import logoChef from "../assets/logo-chef.png";
@@ -11,21 +12,24 @@ function Chef() {
     <>
       <div id="container-orders">
         <Top user="Chayane" logoUser={logoChef} />
-        <div className="title-orders">
-          <h2>Nombre Cliente</h2>
-          <h2>Mesa</h2>
-          <h2>
-            Hora ingreso<br />de pedido</h2>
-        </div>
-        <Orders cliente="Chayane" mesa="Vip" ingreso="altoke" />
+        <TitleOrders />
+        <Orders cliente="Chayane" mesa="3" ingreso="1200" />
       </div>
 
       <Footer
         text={
           <>
-            <Buttons text="Ver Pedidos" /* className="footer-button" */ />
-            <Buttons text="Pedidos Listos" /* className="footer-button" */ />
-          </>
+            <Buttons
+              id={'btn-chef'}
+              text="Ver Pedidos"
+              /* onClick={() => handleMenuClick('pedidos')}
+              active={selectedPedido === 'pedidos'} */ />
+            <Buttons
+              id={'btn-chef'}
+              text="Pedidos Listos"
+              /* onClick={() => handleMenuClick('listos')}
+              active={selectedPedido === 'listos'} */ />
+            </>
         }
       />
     </>

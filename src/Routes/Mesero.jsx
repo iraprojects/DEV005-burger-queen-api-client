@@ -5,10 +5,12 @@ import FoodRow from '../Components/foodRow';
 import Top from '../Components/Top';
 import Footer from '../Components/Footer';
 import Buttons from '../Components/Button';
+import Orders from "../Components/Orders";
+import TitleOrders from "../Components/TitleOrders";
 import LogoMesero from '../assets/logo-mesero.png'
 import { BarDescription } from '../Components/BarDescription';
 
-export default function Route() {
+export default function Meseros() {
     const [selectedMenu, setSelectedMenu] = useState('desayuno');
 
     const handleMenuClick = (menu) => {
@@ -32,7 +34,7 @@ export default function Route() {
                     <FoodRow text="Jugo de frutas natural" price='$7' />
                     <Buttons text={'Generar Orden'} id={'btn-order'} />
                 </>
-            ) : (
+            ) : selectedMenu === 'almuerzo' ? (
                 <>
                     <BarDescription text={'Hamburguesas'} />
                     <FoodRow text="Hamburguesa Simple" price='$10' />
@@ -49,6 +51,11 @@ export default function Route() {
                     <FoodRow text="Bebida/Gaseosa 700ml" price='$10' />
                     <Buttons text={'Generar Orden'} id={'btn-order'} />
                 </>
+            ) : (
+                <>
+            <TitleOrders titleEntrega="Hora Entrega"/>
+            <Orders cliente="Chayane" mesa="3" ingreso="1200" entrega="1220" check="" />
+            </>
             )}
         </div>
 
@@ -65,7 +72,11 @@ export default function Route() {
                         text="Almuerzo" 
                         onClick={() => handleMenuClick('almuerzo')}
                         active={selectedMenu === 'almuerzo'} />
-                    <Buttons id={'btn-mesero'} text="Pedidos" />
+                    <Buttons
+                        id={'btn-mesero'}
+                        text="Pedidos"
+                        onClick={() => handleMenuClick('pedidos')}
+                        active={selectedMenu === 'pedidos'} />
                 </>
             }
         />
