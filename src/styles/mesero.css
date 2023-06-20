@@ -71,3 +71,8 @@
     margin: 1%;
     margin-top: 22.41px;
 }
+
+#miCheckbox {
+    margin: 0;
+    transform: scale(1.5);
+}
