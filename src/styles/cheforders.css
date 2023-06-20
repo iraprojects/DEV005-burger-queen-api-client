@@ -27,6 +27,7 @@ header {
     display: flex;
     flex-direction: row;
     margin-right: auto;
+    align-items: center;
 }
 #topLeft > * {
     margin-right: 1em;
@@ -42,6 +43,7 @@ header {
     display: flex;
     flex-direction: row;
     margin-left: auto;
+    align-items: center;
 }
 #topRight > * {
     margin-right: 1em;
@@ -78,7 +80,7 @@ header {
     margin-top: 0;
 }
 
-.button-form {
+#btn-chef {
     margin-top: 0%;
     width: 8rem;
     margin-right: 20%;
