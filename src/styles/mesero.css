@@ -1,13 +1,15 @@
 .gray-container {
+    box-sizing: border-box;
     background-color: #F0F0EF;
     display: flex;
     flex-direction: column;
-    /* width: 50rem; */
-    /* height: 20rem; */
+    width: 50rem;
     border-radius: 40px;
-    padding: 24px;
-    margin-top: 15%;
-    margin-bottom: 15%;
+    /* margin-top: 15%;
+    margin-bottom: 15%; */
+    margin: 0 auto;
+    margin-top: 12%;
+    margin-bottom: 12%;
 }
 
 .container-h2 {
@@ -31,6 +33,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 0 3%;
 }
 
 .p-footer-mesero {
@@ -42,6 +45,8 @@
 
 #btn-mesero {
     margin-right: 0%;
+    width: 8rem;
+    margin-top: 0;
 }
 
 #price {
@@ -60,7 +65,7 @@
     justify-content: space-around;
     border-radius: 10px;
     font-weight: bolder;
-    margin-top: 4%;
+    margin: 3%;
 }
 
 #btn-order {
@@ -68,4 +73,10 @@
     align-self: end;
     margin: 1%;
     margin-top: 22.41px;
+    margin-right: 3%;
+}
+
+#miCheckbox {
+    margin: 0;
+    transform: scale(1.5);
 }

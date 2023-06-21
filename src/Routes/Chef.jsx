@@ -1,30 +1,51 @@
 // import "../App.css";
 import "../styles/cheforders.css";
+import { useState } from "react";
 import Top from "../Components/Top";
 import Orders from "../Components/Orders";
+import TitleOrders from "../Components/TitleOrders";
 import Footer from "../Components/Footer";
 import Buttons from "../Components/Button";
 import logoChef from "../assets/logo-chef.png";
 
 function Chef() {
+  const [selectedPedido, setSelectedPedido] = useState("pedidos");
+
+  const handlePedidoClick = (pedido) => {
+    setSelectedPedido(pedido);
+  };
+
   return (
     <>
-      <div id="container-orders">
-        <Top user="Chayane" logoUser={logoChef} />
-        <div className="title-orders">
-          <h2>Nombre Cliente</h2>
-          <h2>Mesa</h2>
-          <h2>
-            Hora ingreso<br />de pedido</h2>
+      {selectedPedido === "pedidos" ? (
+        <div id="container-orders">
+          <Top user="Chayane" logoUser={logoChef} />
+          <TitleOrders />
+          <Orders cliente="Chayane" mesa="3" ingreso="1235" />
         </div>
-        <Orders cliente="Chayane" mesa="Vip" ingreso="altoke" />
-      </div>
+      ) : (
+        <div id="container-orders">
+          <Top user="Chayane" logoUser={logoChef} />
+          <TitleOrders titleEntrega="Hora Entrega"/>
+          <Orders cliente="Chayane" mesa="3" ingreso="1235" entrega="3548" />
+        </div>
+      )}
 
       <Footer
         text={
           <>
-            <Buttons text="Ver Pedidos" /* className="footer-button" */ />
-            <Buttons text="Pedidos Listos" /* className="footer-button" */ />
+            <Buttons
+              id={'btn-chef'}
+              text="Ver Pedidos"
+              onClick={() => handlePedidoClick('pedidos')}
+              active={selectedPedido === 'pedidos'}
+            />
+            <Buttons
+              id={'btn-chef'}
+              text="Pedidos Listos"
+              onClick={() => handlePedidoClick('listos')}
+              active={selectedPedido === 'listos'}
+            />
           </>
         }
       />
