@@ -33,7 +33,7 @@ export default function Order() {
 
                 </div>
                 <div className='total-container'>
-                <p id='p-total'>total</p>
+                <p id='p-total'>total $50</p>
                 <Buttons 
                     id={'btn-confirmOrder'}
                     text={'Confirmar'}
