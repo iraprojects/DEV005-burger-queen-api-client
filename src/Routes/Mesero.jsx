@@ -1,6 +1,7 @@
 import "../styles/mesero.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
+import React, { useState } from "react";
 import FoodRow from "../Components/foodRow";
 import Top from "../Components/Top";
 import Footer from "../Components/Footer";
@@ -9,12 +10,27 @@ import Orders from "../Components/Orders";
 import TitleOrders from "../Components/TitleOrders";
 import LogoMesero from "../assets/logo-mesero.png";
 import { BarDescription } from "../Components/BarDescription";
+import ApiProducts from "../Utilities/ApiProducts";
 
 export default function Meseros() {
     const [selectedMenu, setSelectedMenu] = useState("desayuno");
+    const [inputValues, setInputValues] = useState({
+        text: "",
+        price: "",
+        amount: 0
+    });
 
     const handleMenuClick = (menu) => {
         setSelectedMenu(menu);
+    };
+
+    const handleGenerateOrder = () => {
+        const order = {
+            text: inputValues.text,
+            price: inputValues.price,
+            amount: inputValues.amount
+        };
+        console.log("Orden generada:", order);
     };
 
     return (
@@ -31,52 +47,39 @@ export default function Meseros() {
                                 : ""}
                     </h2>
                 </div>
-
-                {selectedMenu === "desayuno" ? (
+                {selectedMenu === "desayuno" && (
                     <>
                         <BarDescription text={"Desayunos"} />
-                        <FoodRow text="Café Americano" price="$5" />
-                        <FoodRow text="Café con leche" price="$7" />
-                        <FoodRow text="Sándwich de jamón y queso" price="$10" />
-                        <FoodRow text="Jugo de frutas natural" price="$7" />
+                        <ApiProducts typeFoodFilter={'Desayuno'} setInputValues={setInputValues} />
 
-                        <Link to={'/order'}>
-                            <Buttons text={"Generar Orden"} id={"btn-order"} />
+                        <Link to="/order">
+                            <Buttons text={"Generar Orden"} id={"btn-order"} onClick={handleGenerateOrder} />
                         </Link>
                     </>
-                ) : selectedMenu === "almuerzo" ? (
+                )}
+
+                {selectedMenu === "almuerzo" && (
                     <>
                         <BarDescription text={"Hamburguesas"} />
-                        <FoodRow text="Hamburguesa Simple" price="$10" />
-                        <FoodRow text="Hamburguesa Doble" price="$15" />
+                        <ApiProducts typeFoodFilter={"Almuerzo"} setInputValues={setInputValues} />
 
-                        <BarDescription text={"Acompañamientos"} />
-                        <FoodRow text="Aros de cebolla" price="$5" />
-                        <FoodRow text="Papas Fritas" price="$5" />
-
-                        <BarDescription text={"Bebidas"} />
-                        <FoodRow text="Agua 500ml" price="$5" />
-                        <FoodRow text="Agua 700ml" price="$7" />
-                        <FoodRow text="Bebida/Gaseosa 500ml" price="$7" />
-                        <FoodRow text="Bebida/Gaseosa 700ml" price="$10" />
-                        
-                        <Link to={'/order'}> 
-                            <Buttons text={"Generar Orden"} id={"btn-order"}/>
+                        <Link to="/order">
+                            <Buttons text={"Generar Orden"} id={"btn-order"} onClick={handleGenerateOrder} />
                         </Link>
                     </>
-                ) : null}
-            
-            {selectedMenu === 'pedidos' && (
-                <>
-                    <TitleOrders titleEntrega="Hora Entrega" servido="Servido" />
-                    <Orders
-                        cliente="Zelda"
-                        mesa="3"
-                        ingreso="1200"
-                        entrega="5678"
-                        check="" />
-                </>
-            )}
+                )}
+
+                {selectedMenu === 'pedidos' && (
+                    <>
+                        <TitleOrders titleEntrega="Hora Entrega" servido="Servido" />
+                        <Orders
+                            cliente="Zelda"
+                            mesa="3"
+                            ingreso="1200"
+                            entrega="5678"
+                            check="" />
+                    </>
+                )}
             </div>
 
             <Footer
@@ -106,8 +109,4 @@ export default function Meseros() {
             />
         </>
     );
-}
-
-{
-    /* <Link to='/' className='link-out'>Cerrar Sesión</Link>  */
 }
