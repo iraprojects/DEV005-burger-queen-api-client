@@ -18,6 +18,9 @@ function LoginLogic() {
 
             if (response.ok) {
                 const data = await response.json();
+                const accessToken = data.accessToken;
+                localStorage.setItem('accessToken', accessToken);
+        
                 setUserRole(data.user.role);
                 resetForm();
                 setRedirectTo(true);

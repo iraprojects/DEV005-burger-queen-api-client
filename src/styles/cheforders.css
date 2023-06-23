@@ -62,6 +62,7 @@ header {
     justify-content: space-around;
     border-radius: 16px;
     width: 50rem;
+    margin-bottom: 5%;
 }
 
 #text-orders {

@@ -19,13 +19,13 @@ function Chef() {
     <>
       {selectedPedido === "pedidos" ? (
         <div id="container-orders">
-          <Top user="Chayane" logoUser={logoChef} />
+          <Top user="Mr Chefsin" logoUser={logoChef} />
           <TitleOrders />
           <Orders cliente="Chayane" mesa="3" ingreso="1235" />
         </div>
       ) : (
         <div id="container-orders">
-          <Top user="Chayane" logoUser={logoChef} />
+          <Top user="Mr Chefsin" logoUser={logoChef} />
           <TitleOrders titleEntrega="Hora Entrega"/>
           <Orders cliente="Chayane" mesa="3" ingreso="1235" entrega="3548" />
         </div>
