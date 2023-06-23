@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
 import FoodRow from "../Components/foodRow";
 
-export default function ApiProducts({ typeFoodFilter, onAmountChange }) {
+export default function ApiProducts({ typeFoodFilter, onGenerateOrder  }) {
     const [menu, setMenu] = useState([]);
-    const [inputValues, setInputValues] = useState({
-        text: "",
-        price: "",
-        amount: 0
-    });
 
     useEffect(() => {
         const fetchMenu = async () => {
@@ -16,18 +11,6 @@ export default function ApiProducts({ typeFoodFilter, onAmountChange }) {
         };
         fetchMenu();
     }, []);
-
-    const handleInputChange = (name, value) => {
-        setInputValues((prevInputValues) => ({
-            ...prevInputValues,
-            [name]: value
-        }));
-    };
-
-    const handleAmountChange = (e) => {
-        const value = e.target.value;
-        handleInputChange("amount", value);
-    };
 
     const getMenu = async () => {
         try {
@@ -64,8 +47,8 @@ export default function ApiProducts({ typeFoodFilter, onAmountChange }) {
                     typeFood={product.type}
                     text={product.name}
                     price={product.price}
-                    onAmountChange={handleAmountChange}
-                    setInputValues={handleInputChange}
+                    onGenerateOrder={onGenerateOrder}
+                    // setSaveOrders={onGenerateOrder}
                 />
             ))}
         </>

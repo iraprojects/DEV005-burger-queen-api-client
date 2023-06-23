@@ -5,11 +5,28 @@ import Footer from "../Components/Footer";
 import LogoMesero from '../assets/logo-mesero.png'
 import Buttons from '../Components/Button';
 import { Link, Navigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import CircularJSON from 'circular-json';
 /* import { useState } from 'react' */
 
 export default function Order() {
+    const [saveOrders, setSaveOrders] = useState([]);
 
-    /* const [selectedMenu, setSelectedMenu] = useState('desayuno'); */
+    /* useEffect(() => {
+        const savedOrders = localStorage.getItem('saveOrders');
+        const parsedOrders = savedOrders ? CircularJSON.parse(savedOrders) : [];
+        setSaveOrders(parsedOrders);
+        console.log(saveOrders);
+    }, []); */
+    useEffect(() => {
+        try {
+            const savedOrders = localStorage.getItem('saveOrders');
+            const parsedOrders = savedOrders ? CircularJSON.parse(savedOrders) : [saveOrders];
+            setSaveOrders(parsedOrders);
+        } catch (error) {
+            console.error('Error parsing JSON:', error);
+        }
+    }, []);
 
     const handleReturnClick = () => {
         return <Navigate to="/mesero" />;
@@ -23,8 +40,15 @@ export default function Order() {
 
             <div className='container'>
                 <div className='orders-container'>
-                    <p className='p-client-food'>Sandwich de jamón y queso $10.</p>
-                    <p className='p-client-food'>Café americano $5.</p>
+                    {/* <p className='p-client-food'>Sandwich de jamón y queso $10.</p> */}
+                    <h2>Pedido Generado:</h2>
+                    {saveOrders.map((order, index) => (
+                        <div key={index}>
+                            {order.text && <p>Nombre: {order.text}</p>}
+                            {order.price && <p>Precio: {order.price}</p>}
+                            {order.amount && <p>Cantidad: {order.amount}</p>}
+                        </div>
+                    ))}
 
                 </div>
 
