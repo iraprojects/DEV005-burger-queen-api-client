@@ -7,6 +7,7 @@ import TitleOrders from "../Components/TitleOrders";
 import Footer from "../Components/Footer";
 import Buttons from "../Components/Button";
 import logoChef from "../assets/logo-chef.png";
+import ApiOrders from "../Utilities/ApiOrders";
 
 function Chef() {
   const [selectedPedido, setSelectedPedido] = useState("pedidos");
@@ -21,13 +22,13 @@ function Chef() {
         <div id="container-orders">
           <Top user="Mr Chefsin" logoUser={logoChef} />
           <TitleOrders />
-          <Orders cliente="Chayane" mesa="3" ingreso="1235" />
+          <ApiOrders />
         </div>
       ) : (
         <div id="container-orders">
           <Top user="Mr Chefsin" logoUser={logoChef} />
           <TitleOrders titleEntrega="Hora Entrega"/>
-          <Orders cliente="Chayane" mesa="3" ingreso="1235" entrega="3548" />
+          <ApiOrders />
         </div>
       )}
 
