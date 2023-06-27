@@ -1,4 +1,6 @@
-export default function Top( {user, logoUser} ) {
+export default function Top( {logoUser} ) {
+  const email = localStorage.getItem('email');
+  const username = email ? email.split("@")[0].replace(/^\w/, (c) => c.toUpperCase()) : '';
     return (
       <>
       <header>
@@ -7,7 +9,7 @@ export default function Top( {user, logoUser} ) {
         <h2 id='text-logo'>Burger Queen</h2>
         </div>
         <div id='topRight'>
-        <h2 id='text-user'> {user} </h2> 
+        <h2 id='text-user'> {username} </h2> 
         <img id='logo-user' src={logoUser} alt='Logo' />
         </div>
       </header>

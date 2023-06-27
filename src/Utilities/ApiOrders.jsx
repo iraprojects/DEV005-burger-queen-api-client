@@ -3,6 +3,7 @@ import Orders from "../Components/Orders";
 
 export default function ApiOrders() {
   const [ordersData, setOrdersData] = useState([]);
+  const [client, setClient] = useState({ id: 1, client: 'Cliente 1' });
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -14,10 +15,14 @@ export default function ApiOrders() {
             Authorization: `Bearer ${token}`,
           },
         });
-        const data = await response.json();
-        setOrdersData(data);
+        if (response.ok) {
+          const data = await response.json();
+          setOrdersData(data);
+        } else {
+          console.log("Error al obtener los pedidos:", response.status);
+        }
       } catch (error) {
-        console.log(error);
+        console.log("Error de conexión:", error);
       }
     };
 
@@ -28,15 +33,14 @@ export default function ApiOrders() {
     <div>
       {Array.isArray(ordersData) &&
         ordersData.map((order) => (
-            
           <Orders
             key={order.id}
             cliente={order.client}
             mesa="3"
             ingreso={order.dateEntry}
             entrega={order.dateProcessed}
-            />
-            ))}
+          />
+        ))}
     </div>
   );
 }
