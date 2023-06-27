@@ -47,6 +47,10 @@ input {
   width: 50%;
 }
 
+button:focus{
+  background-color: #f8e6a8;
+}
+
 input::placeholder{
   color: #424242;
 }

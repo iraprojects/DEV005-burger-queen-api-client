@@ -19,6 +19,7 @@ function LoginLogic() {
             if (response.ok) {
                 const data = await response.json();
                 const accessToken = data.accessToken;
+                console.log(accessToken);
                 localStorage.setItem('accessToken', accessToken);
         
                 setUserRole(data.user.role);

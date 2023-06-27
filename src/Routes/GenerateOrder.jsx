@@ -7,17 +7,10 @@ import Buttons from '../Components/Button';
 import { Link, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import CircularJSON from 'circular-json';
-/* import { useState } from 'react' */
+
 
 export default function Order() {
     const [saveOrders, setSaveOrders] = useState([]);
-
-    /* useEffect(() => {
-        const savedOrders = localStorage.getItem('saveOrders');
-        const parsedOrders = savedOrders ? CircularJSON.parse(savedOrders) : [];
-        setSaveOrders(parsedOrders);
-        console.log(saveOrders);
-    }, []); */
     useEffect(() => {
         try {
             const savedOrders = localStorage.getItem('saveOrders');
@@ -27,6 +20,20 @@ export default function Order() {
             console.error('Error parsing JSON:', error);
         }
     }, []);
+
+    const totalSaveOrders = () => {
+        let total = 0;
+        {saveOrders.forEach((order) => {
+            if ( order.price !== undefined){
+                if (order.amount > 1) {
+                    total += parseInt(order.price) * parseInt(order.amount)
+                }else{
+                    total += parseInt(order.price)
+                }
+            }
+        })}
+        return total;
+    }
 
     const handleReturnClick = () => {
         return <Navigate to="/mesero" />;
@@ -40,7 +47,6 @@ export default function Order() {
 
             <div className='container'>
                 <div className='orders-container'>
-                    {/* <p className='p-client-food'>Sandwich de jamón y queso $10.</p> */}
                     <h2>Pedido Generado:</h2>
                     {saveOrders.map((order, index) => (
                         <div key={index}>
@@ -58,7 +64,7 @@ export default function Order() {
 
                     </div>
                     <div className='total-container'>
-                        <p id='p-total'>total $15</p>
+                        <p id='p-total'>Total: ${totalSaveOrders()}</p>
                         <Buttons
                             id={'btn-confirmOrder'}
                             text={'Confirmar'}
