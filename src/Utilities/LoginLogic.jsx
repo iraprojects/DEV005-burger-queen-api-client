@@ -20,7 +20,9 @@ function LoginLogic() {
                 const data = await response.json();
                 const accessToken = data.accessToken;
                 console.log(accessToken);
+                console.log(data.user.email);
                 localStorage.setItem('accessToken', accessToken);
+                localStorage.setItem('email', data.user.email);
         
                 setUserRole(data.user.role);
                 resetForm();

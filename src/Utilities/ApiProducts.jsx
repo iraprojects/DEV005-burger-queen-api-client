@@ -44,11 +44,12 @@ export default function ApiProducts({ typeFoodFilter, onGenerateOrder  }) {
             {menu.map((product) => (
                 <FoodRow
                     key={product.id}
+                    productID={product.id}
                     typeFood={product.type}
                     text={product.name}
                     price={product.price}
+                    dateEntry={product.dateEntry}
                     onGenerateOrder={onGenerateOrder}
-                    // setSaveOrders={onGenerateOrder}
                 />
             ))}
         </>

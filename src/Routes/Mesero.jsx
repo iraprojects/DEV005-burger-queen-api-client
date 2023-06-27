@@ -53,7 +53,7 @@ export default function Meseros() {
 
     return (
         <>
-            <Top user="Mesero Chayane" logoUser={LogoMesero} />
+            <Top logoUser={LogoMesero} />
 
             <div className="gray-container">
                 <div className="container-h2">

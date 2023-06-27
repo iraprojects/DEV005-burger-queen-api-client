@@ -21,7 +21,7 @@ function Chef() {
     <>
       {selectedPedido === "pedidos" ? (
         <div id="container-orders">
-          <Top user="Mr Chefsin" logoUser={logoChef} />
+          <Top logoUser={logoChef} />
           <TitleOrders />
           <Link to="/showOrder"> 
             <ApiOrders />
@@ -29,7 +29,7 @@ function Chef() {
         </div>
       ) : (
         <div id="container-orders">
-          <Top user="Mr Chefsin" logoUser={logoChef} />
+          <Top logoUser={logoChef} />
           <TitleOrders titleEntrega="Hora Entrega"/>
           <ApiOrders />
         </div>
