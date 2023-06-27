@@ -8,6 +8,7 @@ import OrderHeader from "../Components/OrderHeader";
 import OrderContent from "../Components/OrderContent";
 import OrderCheck from "../Components/OrderCheck";
 import logoChef from "../assets/logo-chef.png";
+import ApiSowOrders from "../Utilities/ApiShowOrders";
 
 function ShowOrder() {
   /*   const handlePedidoClick = (pedidoType) => {
@@ -24,7 +25,7 @@ function ShowOrder() {
       <div className="body-show-order">
       <div className="gray-container2">
           <OrderHeader client="Link" mesa="64" />
-          <OrderContent order="quiero caca"/>
+          <ApiSowOrders/>
           <OrderCheck />
         </div>
 
