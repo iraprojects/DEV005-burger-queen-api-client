@@ -1,6 +1,7 @@
 // import "../App.css";
 import "../styles/cheforders.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Top from "../Components/Top";
 import Orders from "../Components/Orders";
 import TitleOrders from "../Components/TitleOrders";
@@ -22,7 +23,9 @@ function Chef() {
         <div id="container-orders">
           <Top user="Mr Chefsin" logoUser={logoChef} />
           <TitleOrders />
-          <ApiOrders />
+          <Link to="/showOrder"> 
+            <ApiOrders />
+          </Link>
         </div>
       ) : (
         <div id="container-orders">
