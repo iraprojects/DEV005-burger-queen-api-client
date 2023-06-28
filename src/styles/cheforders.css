@@ -1,0 +1,88 @@
+header {
+    display: flex;
+    background-color: #007965;
+    color: #FFFFFF;
+    font-size: small;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-burger {
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+#logo-burger:hover {
+    filter: drop-shadow(0 0 2em #FFCC29);
+}
+#logo-burger.react:hover {
+    filter: drop-shadow(0 0 2em #FFCC29);
+}
+
+#topLeft{
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    align-items: center;
+}
+#topLeft > * {
+    margin-right: 1em;
+}
+
+#logo-user {
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+#topRight{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    align-items: center;
+}
+#topRight > * {
+    margin-right: 1em;
+}
+
+#container-orders{
+    position: fixed;
+    top: 15%;
+    left: 20%;
+}
+
+.single-order{
+    display: flex;
+    flex-direction: row;
+    background-color: #D9D9D9;
+    justify-content: space-around;
+    border-radius: 16px;
+    width: 50rem;
+    margin-bottom: 5%;
+}
+
+#text-orders {
+    color: black;
+    display: flex;
+}
+
+.title-orders{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+}
+.title-orders > * {
+    margin-top: 0;
+}
+
+#btn-chef {
+    margin-top: 0%;
+    width: 8rem;
+    margin-right: 20%;
+}
