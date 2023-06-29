@@ -1,3 +1,5 @@
+import Logo from '../assets/logo.png'
+
 export default function Top( {logoUser} ) {
   const email = localStorage.getItem('email');
   const username = email ? email.split("@")[0].replace(/^\w/, (c) => c.toUpperCase()) : '';
@@ -5,7 +7,7 @@ export default function Top( {logoUser} ) {
       <>
       <header>
         <div id='topLeft'>
-        <img className='logo' id='logo-burger' src='./src/assets/logo.png' alt='Logo' />
+        <img className='logo' id='logo-burger' src={Logo} alt='Logo' />
         <h2 id='text-logo'>Burger Queen</h2>
         </div>
         <div id='topRight'>

@@ -7,13 +7,18 @@ export default function Orders( {cliente, mesa, ingreso, entrega, check} ) {
     return `${hours}:${minutes}`;
   };
 
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+  
     return (
       <>
       <div className='single-order'>
       <h3 id='text-orders'> {cliente} </h3>
-      <h3 id='text-orders'> {mesa} </h3>
+      <h3 id='text-orders'> {getRandomInt(5)} </h3>
       <h3 id='text-orders'> {formatTime(ingreso)} </h3>
-      {entrega && <h3 id="text-orders">{formatTime(entrega)}</h3>}
+      {/* <h3 id='text-orders' ingreso={ingreso}> {ingreso} </h3> */}
+      {/* {entrega && <h3 id="text-orders">{formatTime(entrega)}</h3>} */}
       {check !== undefined && <input type="checkbox" id="miCheckbox" checked={check} />}
 
       </div>

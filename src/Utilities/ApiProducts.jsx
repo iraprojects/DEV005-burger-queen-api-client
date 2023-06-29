@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import FoodRow from "../Components/foodRow";
+import FoodRow from "../Components/FoodRow";
 
 export default function ApiProducts({ typeFoodFilter, onGenerateOrder  }) {
     const [menu, setMenu] = useState([]);

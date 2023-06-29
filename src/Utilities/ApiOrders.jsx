@@ -37,7 +37,7 @@ export default function ApiOrders() {
             key={order.id}
             cliente={order.client}
             mesa="3"
-            ingreso={order.dateEntry}
+            ingreso={order.dataEntry}
             entrega={order.dateProcessed}
           />
         ))}
