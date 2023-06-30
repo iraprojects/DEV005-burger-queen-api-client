@@ -24,7 +24,6 @@ function ShowOrder() {
       <Top user="Mr Chefsin" logoUser={logoChef} />
       <div className="body-show-order">
       <div className="gray-container2">
-          <OrderHeader client="Link" mesa="64" />
           <ApiSowOrders/>
           <OrderCheck />
         </div>
