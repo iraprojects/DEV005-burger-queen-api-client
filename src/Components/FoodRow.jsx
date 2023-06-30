@@ -1,5 +1,3 @@
-// FoodRow.jsx
-
 import React, { useState } from "react";
 
 export default function FoodRow({ text, price, typeFood, dateEntry, key, productID, onGenerateOrder }) {
