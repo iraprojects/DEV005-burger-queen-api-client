@@ -3,7 +3,6 @@ import Orders from "../Components/Orders";
 
 export default function ApiOrders() {
   const [ordersData, setOrdersData] = useState([]);
-  const [client, setClient] = useState({ id: 1, client: 'Cliente 1' });
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -29,6 +28,10 @@ export default function ApiOrders() {
     fetchOrders();
   }, []);
 
+  const handleClientClick = (selectedCliente) => {
+    console.log("Cliente seleccionado:", selectedCliente);
+  };
+
   return (
     <div>
       {Array.isArray(ordersData) &&
@@ -39,6 +42,7 @@ export default function ApiOrders() {
             mesa="3"
             ingreso={order.dataEntry}
             entrega={order.dateProcessed}
+            handleClientClick={handleClientClick}
           />
         ))}
     </div>
