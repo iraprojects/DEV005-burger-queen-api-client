@@ -1,6 +1,8 @@
 .body-show-order{
     display: flex;
     flex-direction: row;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 .gray-container2{
     box-sizing: border-box;
@@ -43,11 +45,11 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    margin-top: 4%;
+    /* margin-top: 4%; */
     background-color: #D9D9D9;
     width: 27rem;
     height: 5rem;
-    border-radius: 16px;
+    border-radius: 16px 16px 0 0;
 }
 
 .element-header{
@@ -57,13 +59,22 @@
 }
 
 .order-content{
-    height: 15rem;
+    /* height: 15rem; */
+    border-bottom-style: solid;
+    border-color: #D9D9D9;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .content-element{
     margin-left: 7%;
 
+}
+
+.orderClient {
+    width: -webkit-fill-available;
+    width: -moz-available;
 }
