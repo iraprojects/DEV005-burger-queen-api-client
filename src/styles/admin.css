@@ -1,0 +1,45 @@
+#btn-admin {
+    margin-top: 0%;
+    width: 8rem;
+    margin-right: 20%;
+}
+
+.container-btn-filter{
+    display:flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#btn-admin-filter{
+    width: auto;
+}
+
+.admin-titles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+}
+.admin-titles > * {
+    margin-top: 0;
+}
+
+.admin-items{
+    flex-direction: row;
+    background-color: #D9D9D9;
+    justify-content: space-around;
+    border-radius: 16px;
+    width: 50rem;
+    margin-bottom: 5%;
+}
+
+.container-body-admin{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-item-admin{
+    display: flex;
+    flex-direction: column;
+}
