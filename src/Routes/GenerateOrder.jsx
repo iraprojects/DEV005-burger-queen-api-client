@@ -4,7 +4,7 @@ import Top from "../Components/Top";
 import Footer from "../Components/Footer";
 import LogoMesero from '../assets/logo-mesero.png'
 import Buttons from '../Components/Button';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import CircularJSON from 'circular-json';
 
@@ -12,7 +12,6 @@ import CircularJSON from 'circular-json';
 export default function Order() {
     const [saveOrders, setSaveOrders] = useState([]);
     const [deletedOrders, setDeletedOrders] = useState([]);
-    const [sendOrder, setSendOrder] = useState('');
     const [clientName, setClientName] = useState('');
 
     useEffect(() => {
@@ -41,10 +40,6 @@ export default function Order() {
         return total;
     }
 
-    const handleReturnClick = () => {
-        return <Navigate to="/mesero" />;
-    };
-
     const handleDeleteOrder = (index) => {
         const updatedOrders = [...saveOrders];
         const deletedOrder = updatedOrders.splice(index, 1)[0];
@@ -52,8 +47,20 @@ export default function Order() {
         setDeletedOrders([...deletedOrders, deletedOrder]);
     };
 
+    const formatDate = (date) => {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+
+        return `${year}-${month}-${day} ${hours}:${minutes}`;
+    };
+
     const handleSendOrder = async () => {
         const orders = saveOrders.filter((o) => o.text)
+        const date = new Date();
+        const formattedDate = formatDate(date);
 
         const orderData = {
             userId: 1,
@@ -69,7 +76,7 @@ export default function Order() {
                 },
             })),
             status: "pending",
-            dataEntry: new Date().toISOString(),
+            dataEntry: formattedDate,
         }
         try {
             const token = localStorage.getItem("accessToken");
@@ -109,11 +116,11 @@ export default function Order() {
                 <div className='orders-container'>
                     <h2>Pedido Generado:</h2>
                     {saveOrders.map((order, index) => (
-                        <div key={index}>
+                        <div key={index} className='div-generate-order'>
                             {order.text && <p>Nombre: {order.text}</p>}
                             {order.price && <p>Precio: {order.price}</p>}
                             {order.amount && <p>Cantidad: {order.amount}</p>}
-                            {order.text && <button onClick={() => handleDeleteOrder(index)}>Eliminar</button>}
+                            {order.text && <button className='btn-delete' onClick={() => handleDeleteOrder(index)}>X</button>}
                         </div>
                     ))}
 
@@ -146,8 +153,8 @@ export default function Order() {
                         <Buttons
                             id={'btn-return'}
                             text={"⏎"}
-                            onClick={handleReturnClick}
-                            /* active={selectedPedido === 'pedidos'} */ />
+                        // onClick={handleReturnClick} 
+                        />
                     </Link>
 
                 </>

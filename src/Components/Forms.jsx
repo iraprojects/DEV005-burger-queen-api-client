@@ -11,7 +11,7 @@ export default function Forms() {
             <Input name="password" type="password" placeholder="Contraseña" />
           </div>
 
-          <Buttons text="Ingresar" />
+          <Buttons text="Ingresar" id='btn-login'/>
 
         </Form>
     </>
