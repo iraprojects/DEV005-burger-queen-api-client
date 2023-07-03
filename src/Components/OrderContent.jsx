@@ -1,4 +1,4 @@
-export default function OrderContent({order, text, qty, status, dateEntry}){
+export default function OrderContent({order, text, qty, status, dataEntry}){
 
     return <>
         <div className="order-content">
@@ -6,7 +6,7 @@ export default function OrderContent({order, text, qty, status, dateEntry}){
             {text && <p className="content-element">{text}</p>}
             {qty && <p className="content-element">Cantidad: {qty}</p>}
             {status && <p className="content-element">Estado: {status}</p>}
-            {dateEntry && <p className="content-element">Hora: {dateEntry}</p>}
+            {dataEntry && <p className="content-element">Hora: {dataEntry}</p>}
         </div>
     </>
 }

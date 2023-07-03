@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Orders from "../Components/Orders";
 
-export default function ApiOrders() {
+export default function ApiOrders({ showReadyOrders }) {
   const [ordersData, setOrdersData] = useState([]);
+  const [filteredOrders, setFilteredOrders] = useState([]);
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -32,19 +33,27 @@ export default function ApiOrders() {
     console.log("Cliente seleccionado:", selectedCliente);
   };
 
+  useEffect(() => {
+    if (showReadyOrders) {
+      const readyOrders = ordersData.filter((order) => order.status === "delivering" || order.status === 'delivered');
+      setFilteredOrders(readyOrders);
+    } else {
+      setFilteredOrders(ordersData);
+    }
+  }, [showReadyOrders, ordersData]);
+
   return (
-    <div>
-      {Array.isArray(ordersData) &&
-        ordersData.map((order) => (
+    <>
+      {Array.isArray(filteredOrders) &&
+        filteredOrders.map((order) => (
           <Orders
             key={order.id}
             cliente={order.client}
-            mesa="3"
             ingreso={order.dataEntry}
-            entrega={order.dateProcessed}
+            status={order.status}
             handleClientClick={handleClientClick}
           />
         ))}
-    </div>
+    </>
   );
 }
