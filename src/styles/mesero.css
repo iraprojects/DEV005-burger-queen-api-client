@@ -74,9 +74,25 @@
     margin: 1%;
     margin-top: 22.41px;
     margin-right: 3%;
+    background-color: #FFCC29;
 }
 
 #miCheckbox {
     margin: 0;
     transform: scale(1.5);
+}
+
+.btn-delete{
+    background-color: #da4545;
+    color: aliceblue;
+}
+
+.div-generate-order{
+    border-bottom-style: groove;
+    width: -webkit-fill-available;
+    padding-bottom: 3%;
+}
+
+.div-generate-order:last-child {
+    border-style: none;
 }
