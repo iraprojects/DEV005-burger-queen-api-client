@@ -50,7 +50,8 @@ export default function ApiOrders({ showReadyOrders }) {
             key={order.id}
             cliente={order.client}
             ingreso={order.dataEntry}
-            status={order.status}
+            status={order.status === "delivering" || order.status === "delivered" ? "Entregado" : "Pendiente"}
+            // status={order.status}
             handleClientClick={handleClientClick}
           />
         ))}
