@@ -5,11 +5,12 @@ import Footer from "../Components/Footer";
 import logoAdmin from "../assets/logo-admin.png";
 import Buttons from "../Components/Button";
 import AdminItem from "../Components/AdminItem";
+import ApiAdminProducts from "../Utilities/ApiAdminProducts";
 
-const productData = {
+/* const productData = {
   name: 'Completo Italiano',
   price: '$9.99',
-};
+}; */
 
 export default function AdminProducts() {
 
@@ -26,7 +27,9 @@ export default function AdminProducts() {
       <h2>Producto:</h2>
       <h2>Precio:</h2>
       </div>
-      <AdminItem product={productData} />
+      
+      <ApiAdminProducts />
+
       </article>
       </section>
       <Footer
