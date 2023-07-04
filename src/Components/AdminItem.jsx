@@ -18,11 +18,13 @@ export default function AdminItem({ worker, product }) {
       )}
 
       {productName && (
+        <>
         <div className="admin-items">
-          <p> {productName}</p>
-          <p> {price}</p>
+          <p> {product.name}</p>
+          <p> {product.price}</p>
           <p>. . .</p>
         </div>
+        </>
       )}
     </div>
   );
