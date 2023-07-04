@@ -12,6 +12,7 @@ import ApiOrders from "../Utilities/ApiOrders";
 function Chef() {
   const [selectedPedido, setSelectedPedido] = useState("pedidos");
   const [showReadyOrders, setShowReadyOrders] = useState(false);
+  const [showPendingOrders, setShowPendingOrders] = useState(false);
 
   const handlePedidoClick = (pedido) => {
     setSelectedPedido(pedido);
@@ -20,6 +21,7 @@ function Chef() {
   const handleReadyOrdersClick = () => {
     handlePedidoClick('listos')
     setShowReadyOrders(true);
+    setShowPendingOrders(true);
   };
 
   return (
@@ -29,7 +31,7 @@ function Chef() {
           <Top logoUser={logoChef} />
           <TitleOrders servido="Estado"/>
           <Link to="/showOrder"> 
-            <ApiOrders />
+            <ApiOrders showPendingOrders={showPendingOrders}/>
           </Link>
         </div>
       ) : (
