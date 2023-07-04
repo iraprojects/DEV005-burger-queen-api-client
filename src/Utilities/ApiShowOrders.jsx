@@ -85,7 +85,7 @@ export default function ApiSowOrders() {
               ))}
               <div className="order-content">
               {/* <p className={orderItem.status === "delivering" ||orderItem.status === "delivered" ? "order-status-true" : "order-status-false"}> Status: {orderItem.status} </p> */}
-              <p className={orderItem.status === "delivering" ||orderItem.status === "delivered" ? "order-status-true" : "order-status-false"}> {orderItem.status === "delivering" || orderItem.status === "delivered" ? "Entregado" : "Pendiente"} </p>
+              <p className={orderItem.status === "delivering" ||orderItem.status === "delivered" ? "order-status-true" : "order-status-false"}> Status: {orderItem.status} </p>
               
               {/* <p  className="content-element">Date Entry: {orderItem.dataEntry}</p> */}
               </div>
