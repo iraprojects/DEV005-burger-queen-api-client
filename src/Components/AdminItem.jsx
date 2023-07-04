@@ -5,19 +5,26 @@ export default function AdminItem({ worker, product }) {
   return (
     <div>
       {role && (
-        <div className="admin-items">
-          <p> {workerName}</p>
-          <p> {email}</p>
-          <p> {contactNumber}</p>
-          <p> {role}</p>
-        </div>
+    <>
+    <div className="admin-items">
+    <p>{worker.name}</p>
+    <p>{worker.email}</p>
+    <p>{worker.contactNumber}</p>
+    <p>{worker.role}</p>
+    <p>. . .</p>
+    </div>
+    </>
+
       )}
 
       {productName && (
+        <>
         <div className="admin-items">
-          <p> {productName}</p>
-          <p> {price}</p>
+          <p> {product.name}</p>
+          <p> {product.price}</p>
+          <p>. . .</p>
         </div>
+        </>
       )}
     </div>
   );

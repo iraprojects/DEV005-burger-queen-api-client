@@ -5,15 +5,16 @@ import Footer from "../Components/Footer";
 import logoAdmin from "../assets/logo-admin.png";
 import Buttons from "../Components/Button";
 import AdminItem from "../Components/AdminItem";
+import ApiWorkers from "../Utilities/ApiWorkers";
 
 export default function AdminWorkers() {
 
-  const workerData = {
+/*   const workerData = {
     name: 'Soila Cerda del Campo',
     email: 'cerdita@gmail.com',
     contactNumber: '123456789',
     role: 'mesera',
-  };
+  }; */
 
     return (
       <>
@@ -32,9 +33,11 @@ export default function AdminWorkers() {
       <h2>Cargo:</h2>
       </div>
 
-      <AdminItem worker={workerData} />
+      <ApiWorkers />
+
       </article>
       </section>
+      
         <Footer
           text={
             <>
