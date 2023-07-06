@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 import Logo from '../assets/logo.png';
 
 function Modal({ isOpen, onClose, onLogout }) {
@@ -33,8 +34,10 @@ export default function Top({ logoUser }) {
   };
 
   const handleLogout = () => {
-    // logica para cerrar sesion 
-    console.log('Cerrando sesión...');
+    localStorage.clear(); 
+    setShowLogoutModal(false);
+   /*  console.log('Cerrando sesión...'); */
+    window.location.href = '/';
   };
 
   const email = localStorage.getItem('email');
