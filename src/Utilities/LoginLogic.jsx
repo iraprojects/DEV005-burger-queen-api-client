@@ -41,7 +41,12 @@ function LoginLogic() {
         }
     };
 
-    return { redirectTo, userRole, handleSubmit };
-}
+    const handleLogout = () => {
+      localStorage.clear(); 
+      console.log('Cerrando sesión...');
+    };
+  
+    return { redirectTo, userRole, handleSubmit, handleLogout };
+  }
 
 export default LoginLogic;
