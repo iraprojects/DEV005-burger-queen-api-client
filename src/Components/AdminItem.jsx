@@ -43,34 +43,45 @@ export default function AdminItem({ worker, product }) {
       <div className="modal">
         <div className="modal-content">
           <h2>Detalles</h2>
-          {isEditing ? (
+          {worker && (
             <>
-              <p>
-                Email:
-                <input
-                  type="text"
-                  value={editedEmail}
-                  onChange={(e) => setEditedEmail(e.target.value)}
-                />
-              </p>
-              <p>
-                Rol:
-                <select value={editedRole} onChange={(e) => setEditedRole(e.target.value)}>
-                  <option value="waiter">Waiter</option>
-                  <option value="chef">Chef</option>
-                  <option value="admin">Admin</option>
-                </select>
-              </p>
-              <button onClick={handleSaveClick}>Guardar</button>
-              <button onClick={handleCancelClick}>Cancelar</button>
-            </>
-          ) : (
-            <>
-              <p>Email: {email}</p>
-              <p>Rol: {role}</p>
-              <button onClick={handleEditClick}>Editar</button>
+              {isEditing ? (
+                <>
+                  <p>
+                    Email:
+                    <input
+                      type="text"
+                      value={editedEmail}
+                      onChange={(e) => setEditedEmail(e.target.value)}
+                    />
+                  </p>
+                  <p>
+                    Rol:
+                    <select value={editedRole} onChange={(e) => setEditedRole(e.target.value)}>
+                      <option value="waiter">Waiter</option>
+                      <option value="chef">Chef</option>
+                      <option value="admin">Admin</option>
+                    </select>
+                  </p>
+                  <button onClick={handleSaveClick}>Guardar</button>
+                  <button onClick={handleCancelClick}>Cancelar</button>
+                </>
+              ) : (
+                <>
+                  <p>Email: {email}</p>
+                  <p>Rol: {role}</p>
+                  <button onClick={handleEditClick}>Editar</button>
+                </>
+              )}
             </>
           )}
+          {product && (
+            <>
+              <p>Nombre del producto: {productName}</p>
+              <p>Precio: {price}</p>
+            </>
+          )}
+
           <button onClick={onClose}>Cerrar</button>
         </div>
       </div>
