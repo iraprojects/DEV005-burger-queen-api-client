@@ -27,9 +27,7 @@ export default function AdminWorkers() {
         </div>
         <article className="container-item-admin">
       <div className="admin-titles">
-      <h2>Nombre:</h2>
       <h2>Correo:</h2>
-      <h2>Número de contacto:</h2>
       <h2>Cargo:</h2>
       </div>
 

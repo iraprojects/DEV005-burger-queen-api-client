@@ -9,7 +9,7 @@ function Login() {
   const { redirectTo, userRole, handleSubmit } = LoginLogic();
 
   if (redirectTo) {
-    if (userRole === 'admin') return <Navigate to="/mesero" />;
+    if (userRole === 'admin') return <Navigate to="/adminWorkers" />;
     if (userRole === 'waiter') return <Navigate to="/mesero" />;
     if (userRole === 'chef') return <Navigate to="/chef" />;
   }
