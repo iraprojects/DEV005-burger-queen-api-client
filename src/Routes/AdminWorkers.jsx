@@ -8,48 +8,46 @@ import AdminItem from "../Components/AdminItem";
 import ApiWorkers from "../Utilities/ApiWorkers";
 
 export default function AdminWorkers() {
-
-/*   const workerData = {
+  /*   const workerData = {
     name: 'Soila Cerda del Campo',
     email: 'cerdita@gmail.com',
     contactNumber: '123456789',
     role: 'mesera',
   }; */
 
-    return (
-      <>
-        <Top logoUser={logoAdmin} />
-        <section className="container-body-admin">
+  return (
+    <>
+      <Top logoUser={logoAdmin} />
+      <section className="container-body-admin">
         <div className="container-btn-filter">
-        <Buttons id="btn-admin-filter" text="Meseros"/>
-        <Buttons id="btn-admin-filter" text="Cocineros"/>
-        <Buttons id="btn-admin-filter" text="Administradores"/>
+          <Buttons id="btn-admin-filter" text="Meseros" />
+          <Buttons id="btn-admin-filter" text="Cocineros" />
+          <Buttons id="btn-admin-filter" text="Administradores" />
         </div>
         <article className="container-item-admin">
-      <div className="admin-titles">
-      <h2>Nombre:</h2>
-      <h2>Correo:</h2>
-      <h2>Número de contacto:</h2>
-      <h2>Cargo:</h2>
-      </div>
+          <div className="admin-titles">
+            <h2>Nombre:</h2>
+            <h2>Correo:</h2>
+            <h2>Número de contacto:</h2>
+            <h2>Cargo:</h2>
+          </div>
 
-      <ApiWorkers />
-
-      </article>
+          <ApiWorkers />
+        </article>
       </section>
-      
-        <Footer
-          text={
-            <>
+
+      <Footer
+        text={
+          <>
             <Link to="/adminWorkers">
               <Buttons id="btn-admin" text="Trabajadores" />
-              </Link>
-              <Link to="/adminProducts">
-                <Buttons id="btn-admin" text="Productos" />
-              </Link>
-            </>
-          }
-        />
-      </>
-    );
-  }
+            </Link>
+            <Link to="/adminProducts">
+              <Buttons id="btn-admin" text="Productos" />
+            </Link>
+          </>
+        }
+      />
+    </>
+  );
+}
