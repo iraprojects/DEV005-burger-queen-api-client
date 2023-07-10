@@ -7,11 +7,6 @@ import Buttons from "../Components/Button";
 import AdminItem from "../Components/AdminItem";
 import ApiAdminProducts from "../Utilities/ApiAdminProducts";
 
-/* const productData = {
-  name: 'Completo Italiano',
-  price: '$9.99',
-}; */
-
 export default function AdminProducts() {
 
   return (
@@ -23,7 +18,7 @@ export default function AdminProducts() {
       <Buttons id="btn-admin-filter" text="Almuerzo"/>
       </div>
         <article className="container-item-admin">
-      <div className="admin-titles">
+      <div className="admin-titles" id="titles-product">
       <h2>Producto:</h2>
       <h2>Precio:</h2>
       </div>
