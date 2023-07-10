@@ -25,12 +25,10 @@ export default function AdminWorkers() {
           <Buttons id="btn-admin-filter" text="Administradores" />
         </div>
         <article className="container-item-admin">
-          <div className="admin-titles">
-            <h2>Nombre:</h2>
-            <h2>Correo:</h2>
-            <h2>Número de contacto:</h2>
-            <h2>Cargo:</h2>
-          </div>
+      <div className="admin-titles">
+      <h2>Correo:</h2>
+      <h2>Cargo:</h2>
+      </div>
 
           <ApiWorkers />
         </article>

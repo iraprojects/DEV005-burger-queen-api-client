@@ -13,6 +13,7 @@ export default function Order() {
     const [saveOrders, setSaveOrders] = useState([]);
     const [deletedOrders, setDeletedOrders] = useState([]);
     const [clientName, setClientName] = useState('');
+    const [orderSent, setOrderSent] = useState(false);
 
     useEffect(() => {
         try {
@@ -91,6 +92,7 @@ export default function Order() {
             console.log(orderData);
             if (response.ok) {
                 console.log("Pedido enviado exitosamente");
+                setOrderSent(true);
             } else {
                 console.error("Error al enviar el pedido:", response.status);
             }
@@ -138,6 +140,7 @@ export default function Order() {
                             text={'Confirmar'}
                             onClick={handleSendOrder}
                         />
+                        {orderSent && <p>Pedido enviado a cocina</p>}
                     </div>
 
                 </div>
