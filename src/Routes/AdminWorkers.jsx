@@ -9,13 +9,6 @@ import ApiWorkers from "../Utilities/ApiWorkers";
 
 export default function AdminWorkers() {
 
-/*   const workerData = {
-    name: 'Soila Cerda del Campo',
-    email: 'cerdita@gmail.com',
-    contactNumber: '123456789',
-    role: 'mesera',
-  }; */
-
     return (
       <>
         <Top logoUser={logoAdmin} />
