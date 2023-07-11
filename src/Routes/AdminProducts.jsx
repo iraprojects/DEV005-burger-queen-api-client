@@ -14,24 +14,24 @@ export default function AdminProducts() {
       <Top logoUser={logoAdmin} />
       <section className="container-body-admin">
         <div className="container-btn-filter">
-      <Buttons id="btn-admin-filter" text="Desayuno"/>
-      <Buttons id="btn-admin-filter" text="Almuerzo"/>
-      </div>
+          <Buttons id="btn-admin-filter" text="Desayuno" />
+          <Buttons id="btn-admin-filter" text="Almuerzo" />
+        </div>
         <article className="container-item-admin">
-      <div className="admin-titles" id="titles-product">
-      <h2>Producto:</h2>
-      <h2>Precio:</h2>
-      </div>
-      
-      <ApiAdminProducts />
+          <div className="admin-titles" id="titles-product">
+            <h2 className="id-h2-product">Producto</h2>
+            <h2 className="id-h2-product">Precio</h2>
+          </div>
 
-      </article>
+          <ApiAdminProducts />
+
+        </article>
       </section>
       <Footer
         text={
           <>
-          <Link to="/adminWorkers">
-            <Buttons id="btn-admin" text="Trabajadores" />
+            <Link to="/adminWorkers">
+              <Buttons id="btn-admin" text="Trabajadores" />
             </Link>
             <Link to="/adminProducts">
               <Buttons id="btn-admin" text="Productos" />

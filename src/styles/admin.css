@@ -104,7 +104,7 @@
 }
 
 #titles-product {
-    gap: 18%;
+    gap: 8%;
 }
 
 #aside-add {
@@ -126,4 +126,8 @@
 
 #item-role {
     width: 60px;
+}
+
+.id-h2-product {
+    margin-left: 8%;
 }

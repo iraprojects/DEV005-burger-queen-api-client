@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { updateUser } from '../Utilities/UpdateApiWorkers';
 import { updateProducts } from '../Utilities/UpdateApiProducts';
 import { deleteProduct } from '../Utilities/DeleteApiProducts';
+import { deleteWorker } from '../Utilities/DeleteApiWorkers';
 
 export default function AdminItem({ worker, product }) {
   const { email, role } = worker || {};
@@ -21,22 +22,32 @@ export default function AdminItem({ worker, product }) {
     setIsEditing(true);
   };
 
-  const handleSaveClick = () => {
+  const handleSaveClick = async () => {
     console.log(worker.id, worker.email, worker.role);
-    updateUser(worker.id, editedEmail, editedRole);
-    setIsEditing(false);
+    await updateUser(worker.id, editedEmail, editedRole);
+    // setIsEditing(false);
   };
 
   const handleSaveProduct = () => {
     console.log(product.id, editedProductName, editedPrice, editedType);
     updateProducts(product.id, editedProductName, editedPrice, editedType);
-    setIsEditing(false);
   };
 
   const handleDeleteProduct = async () => {
     try {
       await deleteProduct(product.id);
       console.log('producto eliminado:', product.id)
+    } catch (error) {
+      console.error('Error:', error);
+    } finally {
+      setIsModalOpen(false);
+    }
+  };
+
+  const handleDeleteWorker = async () => {
+    try {
+      await deleteWorker(worker.id);
+      console.log('User eliminado:', worker.id)
     } catch (error) {
       console.error('Error:', error);
     } finally {
@@ -85,14 +96,15 @@ export default function AdminItem({ worker, product }) {
                       <option value="admin">Admin</option>
                     </select>
                   </p>
-                  <button onClick={handleSaveClick}>Guardar</button>
-                  <button onClick={handleCancelClick}>Cancelar</button>
+                  <button type='button' onClick={handleSaveClick}>Guardar</button>
+                  <button type='button' onClick={handleCancelClick}>Cancelar</button>
                 </>
               ) : (
                 <>
                   <p>Email: {email}</p>
                   <p>Rol: {role}</p>
-                  <button onClick={handleEditClick}>Editar</button>
+                  <button type='button' onClick={handleEditClick}>Editar</button>
+                  <button type='button' onClick={handleDeleteWorker}>Eliminar</button>
                 </>
               )}
             </>
@@ -124,8 +136,8 @@ export default function AdminItem({ worker, product }) {
                       <option value="almuerzo">Almuerzo</option>
                     </select>
                   </p>
-                  <button onClick={handleSaveProduct}>Guardar</button>
-                  <button onClick={handleCancelClick}>Cancelar</button>
+                  <button type='button' onClick={handleSaveProduct}>Guardar</button>
+                  <button type='button' onClick={handleCancelClick}>Cancelar</button>
                 </>
               ) : (
                 <>
