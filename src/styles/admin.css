@@ -4,37 +4,66 @@
     margin-right: 20%;
 }
 
-.container-btn-filter{
-    display:flex;
+.container-btn-filter {
+    display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-#btn-admin-filter{
+#btn-admin-filter {
     width: auto;
 }
 
-.admin-titles{
-    display: flex;
+.admin-titles {
+    /* display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
     align-items: center;
     color: black;
+    gap: 28%;
+    padding-left: 14%; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-around; */
+    /* align-items: center;
+    color: black;
+    gap: 9.2rem;
+    padding-left: 9rem;
+    width: -webkit-fill-available; */
+
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: space-around; */
+    flex-direction: row;
+    background-color: #f5f5f54a;
+    border-radius: 16px 16px 0 0;
+    width: 40rem;
     gap: 23%;
-    margin-left: 5%;
+    border-bottom-style: outset;
 }
-.admin-titles > * {
+
+#h2-email {
+    margin-left: 15%;
+}
+
+.admin-titles>* {
     margin-top: 0;
 }
 
-.admin-items{
-    display: flex;
+.admin-items {
+    /* display: flex;
     flex-direction: row;
     background-color: #f5f5f5;
     justify-content: space-around;
     border-radius: 40px;
     width: 40rem;
     margin-bottom: 5%;
+    border-bottom-style: outset; */
+
+    display: flex;
+    flex-direction: row;
+    background-color: #f5f5f5;
+    justify-content: space-around;
+    width: 40rem;
     border-bottom-style: outset;
 }
 
@@ -42,19 +71,30 @@
     background-color: #f8e6a8;
 }
 
-.container-body-admin{
+.container-body-admin {
     display: flex;
-    flex-direction: row;
+    height: 100lvh;
+    width: 100lvw;
 }
 
-.container-item-admin{
+.container-item-admin {
+    /* display: flex;
+    flex-direction: column; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-flow: wrap;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    justify-content: center;
+    margin-bottom: auto;
+    padding-bottom: 2%;
+
 }
 
 .item-user {
     display: flex;
     width: 25%;
+    align-self: center;
 }
 
 .item-product {
@@ -65,4 +105,25 @@
 
 #titles-product {
     gap: 18%;
+}
+
+#aside-add {
+    /* display: inherit;
+    margin-top: 7%;
+    margin-right: 4%;
+    justify-content: end; */
+    display: flex;
+    padding-right: 4%;
+    padding-left: 4%;
+    justify-content: end;
+    background-color: #f5f5f54a;
+    flex-direction: column-reverse;
+    justify-content: start;
+    margin-top: 4rem;
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+#item-role {
+    width: 60px;
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { updateUser } from '../Utilities/UpdateApiWorkers';
 
 export default function AdminItem({ worker, product }) {
-  const { name: workerName, email, contactNumber, role } = worker || {};
+  const { email, role } = worker || {};
   const { name: productName, price } = product || {};
   const [isEditing, setIsEditing] = useState(false);
   const [editedEmail, setEditedEmail] = useState(email);
@@ -23,7 +23,6 @@ export default function AdminItem({ worker, product }) {
 
   const handleCancelClick = () => {
     setIsEditing(false);
-    // Aquí puedes revertir los cambios si es necesario
   };
 
   const handleOpenModal = () => {
@@ -89,16 +88,13 @@ export default function AdminItem({ worker, product }) {
   };
 
   return (
-    <div>
+    <>
       {role && (
         <>
           <div className="admin-items">
-            {/* <p>{worker.name}</p> */}
             <p className="item-user">{worker.email}</p>
-            {/* <p>{worker.contactNumber}</p> */}
-            <p className="item-user">{worker.role}</p>
-            {/* <p>. . .</p> */}
-            <button onClick={handleOpenModal}>Editar</button>
+            <p className="item-user" id='item-role' >{worker.role}</p>
+            <button onClick={handleOpenModal}>Opciones</button>
           </div>
         </>
 
@@ -109,14 +105,13 @@ export default function AdminItem({ worker, product }) {
           <div className="admin-items">
             <p className='item-product'> {product.name}</p>
             <p className='item-product'> {product.price}</p>
-            {/* <p>. . .</p> */}
             <button onClick={handleOpenModal}>probanding</button>
           </div>
         </>
       )}
 
       {isModalOpen && <Modal onClose={handleCloseModal} />}
-    </div>
+    </>
   );
 
 }
