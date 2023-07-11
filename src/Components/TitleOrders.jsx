@@ -2,10 +2,10 @@ export default function TitleOrders({titleEntrega, servido}) {
 
     return <>
         <div className="title-orders">
-        <h2>Nombre Cliente</h2>
-        <h2>Hora ingreso<br />de pedido</h2>
+        <h2 id="h2-client">Cliente</h2>
+        {/* <h2>Hora</h2> */}
         {titleEntrega && <h2>{(titleEntrega)}</h2>}
-        {servido && <h2>{(servido)}</h2>}
+        {servido && <h2 id="h2-status">{(servido)}</h2>}
         </div>
 
   </>

@@ -1,5 +1,3 @@
-
-
 export const updateUser = async (userId, newEmail, newRole) => {
   try {
     const token = localStorage.getItem('accessToken');

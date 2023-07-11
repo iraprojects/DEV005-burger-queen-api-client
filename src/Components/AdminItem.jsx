@@ -4,7 +4,9 @@ import { updateProducts } from '../Utilities/UpdateApiProducts';
 import { deleteProduct } from '../Utilities/DeleteApiProducts';
 
 export default function AdminItem({ worker, product }) {
-  const { name: workerName, email, contactNumber, role } = worker || {};
+  const { email, role } = worker || {};
+  // const { name: productName, price } = product || {};
+  // const { name: workerName, email, contactNumber, role } = worker || {};
   const { name: productName, price, type } = product || {};
   const [isEditing, setIsEditing] = useState(false);
   const [editedEmail, setEditedEmail] = useState(email);
@@ -142,13 +144,13 @@ export default function AdminItem({ worker, product }) {
   };
 
   return (
-    <div>
+    <>
       {role && (
         <>
           <div className="admin-items">
             <p className="item-user">{worker.email}</p>
-            <p className="item-user">{worker.role}</p>
-            <button onClick={handleOpenModal}>Editar</button>
+            <p className="item-user" id='item-role' >{worker.role}</p>
+            <button onClick={handleOpenModal}>Opciones</button>
           </div>
         </>
       )}
@@ -156,14 +158,14 @@ export default function AdminItem({ worker, product }) {
       {productName && (
         <>
           <div className="admin-items">
-            <p className="item-product">{product.name}</p>
-            <p className="item-product">{product.price}</p>
+            <p className='item-product'> {product.name}</p>
+            <p className='item-product'> {product.price}</p>
             <button onClick={handleOpenModal}>Opciones</button>
           </div>
         </>
       )}
 
       {isModalOpen && <Modal onClose={handleCloseModal} />}
-    </div>
+    </>
   );
 }
