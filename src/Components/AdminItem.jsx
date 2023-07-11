@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { updateUser } from '../Utilities/UpdateApiWorkers';
+import { updateProducts } from '../Utilities/UpdateApiProducts';
+import { deleteProduct } from '../Utilities/DeleteApiProducts';
 
 export default function AdminItem({ worker, product }) {
   const { name: workerName, email, contactNumber, role } = worker || {};
-  const { name: productName, price } = product || {};
+  const { name: productName, price, type } = product || {};
   const [isEditing, setIsEditing] = useState(false);
   const [editedEmail, setEditedEmail] = useState(email);
   const [editedRole, setEditedRole] = useState(role);
+  const [editedProductName, setEditedProductName] = useState(productName);
+  const [editedPrice, setEditedPrice] = useState(price);
+  const [editedType, setEditedType] = useState(type);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -20,10 +25,25 @@ export default function AdminItem({ worker, product }) {
     setIsEditing(false);
   };
 
+  const handleSaveProduct = () => {
+    console.log(product.id, editedProductName, editedPrice, editedType);
+    updateProducts(product.id, editedProductName, editedPrice, editedType);
+    setIsEditing(false);
+  };
+
+  const handleDeleteProduct = async () => {
+    try {
+      await deleteProduct(product.id);
+      console.log('producto eliminado:', product.id)
+    } catch (error) {
+      console.error('Error:', error);
+    } finally {
+      setIsModalOpen(false);
+    }
+  };
 
   const handleCancelClick = () => {
     setIsEditing(false);
-    // Aquí puedes revertir los cambios si es necesario
   };
 
   const handleOpenModal = () => {
@@ -77,11 +97,44 @@ export default function AdminItem({ worker, product }) {
           )}
           {product && (
             <>
-              <p>Nombre del producto: {productName}</p>
-              <p>Precio: {price}</p>
+              {isEditing ? (
+                <>
+                  <p>
+                    Nombre:
+                    <input
+                      type="text"
+                      value={editedProductName}
+                      onChange={(e) => setEditedProductName(e.target.value)}
+                    />
+                  </p>
+                  <p>
+                    Precio:
+                    <input
+                      type="text"
+                      value={editedPrice}
+                      onChange={(e) => setEditedPrice(e.target.value)}
+                    />
+                  </p>
+                  <p>
+                    Tipo:
+                    <select value={editedType} onChange={(e) => setEditedType(e.target.value)}>
+                      <option value="desayuno">Desayuno</option>
+                      <option value="almuerzo">Almuerzo</option>
+                    </select>
+                  </p>
+                  <button onClick={handleSaveProduct}>Guardar</button>
+                  <button onClick={handleCancelClick}>Cancelar</button>
+                </>
+              ) : (
+                <>
+                  <p>Nombre del producto: {productName}</p>
+                  <p>Precio: {price}</p>
+                  <button onClick={handleEditClick}>Editar</button>
+                  <button onClick={handleDeleteProduct}>Eliminar</button>
+                </>
+              )}
             </>
           )}
-
           <button onClick={onClose}>Cerrar</button>
         </div>
       </div>
@@ -93,24 +146,19 @@ export default function AdminItem({ worker, product }) {
       {role && (
         <>
           <div className="admin-items">
-            {/* <p>{worker.name}</p> */}
             <p className="item-user">{worker.email}</p>
-            {/* <p>{worker.contactNumber}</p> */}
             <p className="item-user">{worker.role}</p>
-            {/* <p>. . .</p> */}
             <button onClick={handleOpenModal}>Editar</button>
           </div>
         </>
-
       )}
 
       {productName && (
         <>
           <div className="admin-items">
-            <p className='item-product'> {product.name}</p>
-            <p className='item-product'> {product.price}</p>
-            {/* <p>. . .</p> */}
-            <button onClick={handleOpenModal}>probanding</button>
+            <p className="item-product">{product.name}</p>
+            <p className="item-product">{product.price}</p>
+            <button onClick={handleOpenModal}>Opciones</button>
           </div>
         </>
       )}
@@ -118,5 +166,4 @@ export default function AdminItem({ worker, product }) {
       {isModalOpen && <Modal onClose={handleCloseModal} />}
     </div>
   );
-
 }
