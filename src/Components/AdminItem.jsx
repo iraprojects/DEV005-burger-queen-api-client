@@ -160,7 +160,7 @@ export default function AdminItem({ worker, product }) {
           <div className="admin-items">
             <p className='item-product'> {product.name}</p>
             <p className='item-product'> {product.price}</p>
-            <button onClick={handleOpenModal}>probanding</button>
+            <button onClick={handleOpenModal}>Opciones</button>
           </div>
         </>
       )}
