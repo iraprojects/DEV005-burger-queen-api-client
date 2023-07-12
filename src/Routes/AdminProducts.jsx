@@ -56,6 +56,7 @@ export default function AdminProducts() {
       <div className="admin-titles" id="titles-product">
       <h2>Producto:</h2>
       <h2>Precio:</h2>
+      <h2>Tipo:</h2>
       </div>
       
       <ApiAdminProducts />
