@@ -104,7 +104,7 @@ export default function Order() {
     return <>
         <Top logoUser={LogoMesero} />
 
-        <div className='gray-container'>
+        <div id='id-container-generate-order' className='gray-container'>
             <input
                 type="text"
                 className='input-order'

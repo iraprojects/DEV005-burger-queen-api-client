@@ -48,7 +48,7 @@ export default function AdminProducts() {
     <>
       <Top logoUser={logoAdmin} />
       <section className="container-body-admin">
-      <aside id="aside-add">
+        <aside id="aside-add">
           <button id="btn-add-worker" onClick={handleOpenModal}>Añadir Producto</button>
           <h2>Productos</h2>
         </aside>
@@ -56,10 +56,9 @@ export default function AdminProducts() {
           <div className="admin-titles" id="titles-product">
             <h2 className="id-h2-product">Producto</h2>
             <h2 className="id-h2-product">Precio</h2>
+            <h2>Tipo</h2>
           </div>
-
           <ApiAdminProducts />
-
         </article>
       </section>
 

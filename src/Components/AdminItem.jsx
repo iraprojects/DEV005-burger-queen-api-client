@@ -143,6 +143,7 @@ export default function AdminItem({ worker, product }) {
                 <>
                   <p>Nombre del producto: {productName}</p>
                   <p>Precio: {price}</p>
+                  <p>Tipo: {type}</p>
                   <button onClick={handleEditClick}>Editar</button>
                   <button onClick={handleDeleteProduct}>Eliminar</button>
                 </>
@@ -170,8 +171,9 @@ export default function AdminItem({ worker, product }) {
       {productName && (
         <>
           <div className="admin-items">
-            <p className='item-product'> {product.name}</p>
-            <p className='item-product'> {product.price}</p>
+            <p id='id-text' className='item-product'> {product.name}</p>
+            <p id='id-price' className='item-product'> {product.price}</p>
+            <p id='id-type' className='item-product'> {product.type}</p>
             <button onClick={handleOpenModal}>Opciones</button>
           </div>
         </>

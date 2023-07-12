@@ -104,7 +104,7 @@
 }
 
 #titles-product {
-    gap: 8%;
+    gap: 9.5%;
 }
 
 #aside-add {
@@ -129,5 +129,18 @@
 }
 
 .id-h2-product {
-    margin-left: 8%;
+    margin-left: 6%;
+}
+
+#id-text {
+
+}
+
+#id-price {
+    display: flex;
+    justify-content: center;
+}
+
+#id-type {
+
 }

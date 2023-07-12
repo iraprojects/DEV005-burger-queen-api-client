@@ -76,7 +76,7 @@ export default function Meseros() {
 
 				{selectedMenu === "almuerzo" && (
 					<>
-						<BarDescription text={"Hamburguesas"} />
+						<BarDescription text={"Almuerzos"} />
 						<ApiProducts typeFoodFilter={"Almuerzo"} onGenerateOrder={handleGenerateOrder} />
 
 						<Link to="/order">
