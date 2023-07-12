@@ -31,13 +31,13 @@ function Chef() {
           <Top logoUser={logoChef} />
           <TitleOrders titleEntrega="Hora" servido="Estado"/>
           <Link to="/showOrder"> 
-            <ApiOrders showPendingOrders={showPendingOrders}/>
+            <ApiOrders showPendingOrders={showPendingOrders} showBtn={true}/>
           </Link>
         </div>
       ) : (
         <div id="container-orders">
           <Top logoUser={logoChef} />
-          <TitleOrders titleEntrega="Entrega" servido="Estado"/>
+          <TitleOrders id={'id-tittle-orders'} titleEntrega="Entrega" servido="Estado"/>
           <ApiOrders showReadyOrders={showReadyOrders} />
         </div>
       )}
