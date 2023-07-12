@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Orders from "../Components/Orders";
 
-export default function ApiOrders({ showReadyOrders, showPendingOrders, showCheckbox  }) {
+export default function ApiOrders({ showReadyOrders, showPendingOrders, showCheckbox, showBtn  }) {
   const [ordersData, setOrdersData] = useState([]);
   const [filteredOrders, setFilteredOrders] = useState([]);
 
@@ -106,6 +106,7 @@ export default function ApiOrders({ showReadyOrders, showPendingOrders, showChec
             showCheckbox={showCheckbox}
             handleClientClick={handleClientClick}
             updateOrderStatus={updateOrderStatus}
+            btnOption={showBtn}
           />
         ))}
     </>

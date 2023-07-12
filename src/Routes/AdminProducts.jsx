@@ -87,8 +87,8 @@ export default function AdminProducts() {
               value={newProduct.type}
               onChange={(e) => setNewProduct({ ...newProduct, type: e.target.value })}
             >
-              <option value="desayuno">Desayuno</option>
-              <option value="almuerzo">Almuerzo</option>
+              <option value="Desayuno">Desayuno</option>
+              <option value="Almuerzo">Almuerzo</option>
             </select>
             <button onClick={handleSaveProduct}>Guardar</button>
             <button onClick={handleCloseModal}>Cancelar</button>

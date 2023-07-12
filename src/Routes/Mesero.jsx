@@ -63,15 +63,6 @@ export default function Meseros() {
 			<Top logoUser={LogoMesero} />
 
 			<div className="gray-container" style={selectedMenu === "pedidos" ? { backgroundColor: 'transparent' } : null}>
-				<div className="container-h2">
-					<h2 className="text-h2">
-						{selectedMenu === "desayuno"
-							? "Desayuno"
-							: selectedMenu === "almuerzo"
-								? "Almuerzo"
-								: ""}
-					</h2>
-				</div>
 				{selectedMenu === "desayuno" && (
 					<>
 						<BarDescription text={"Desayunos"} />
@@ -96,7 +87,7 @@ export default function Meseros() {
 
 				{selectedMenu === 'pedidos' && (
 					<>
-						<TitleOrders titleEntrega="Hora Entrega" servido="Servido" />
+						<TitleOrders id={'id-tittle-waiter'} titleEntrega="Hora Entrega" servido="Servido" />
 						<ApiOrders showReadyOrders={showReadyOrders} showCheckbox={true} />
 					</>
 				)}
