@@ -12,7 +12,7 @@ export default function AdminWorkers() {
   const [newUser, setNewUser] = useState({
     email: "",
     password: "",
-    role: "",
+    role: "waiter",
   });
 
   const handleOpenModal = () => {
@@ -66,7 +66,7 @@ export default function AdminWorkers() {
           <div className="modal-content">
             <h2>Añadir Trabajador</h2>
             <input
-              type="text"
+              type="email"
               placeholder="Correo electrónico"
               value={newUser.email}
               onChange={(e) =>
@@ -82,7 +82,8 @@ export default function AdminWorkers() {
               }
             />
             <select
-              value={newUser.role}
+              // value={newUser.role}
+              defaultValue="waiter"
               onChange={(e) => setNewUser({ ...newUser, role: e.target.value })}
             >
               <option value="waiter">Waiter</option>
