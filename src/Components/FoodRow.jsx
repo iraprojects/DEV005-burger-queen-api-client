@@ -29,14 +29,16 @@ export default function FoodRow({ text, price, typeFood, dateEntry, keyy, produc
 				<p className="text-food" key={keyy} dateentry={dateEntry} productid={productID} typefood={typeFood}>{text}</p>
 				<p className="text-food" id="price" typefood={typeFood}>{price}</p>
 				<input
+					id="id-input-number"
 					type="number"
 					className="text-food camount"
 					onChange={handleAmountChange}
 					value={amount}
 					min="0"
 					max="20"
+					onClick={handleClick}
 				/>
-				<button onClick={handleClick}>Añadir</button>
+				{/* <button onClick={handleClick}>Añadir</button> */}
 			</div>
 		</>
 	);

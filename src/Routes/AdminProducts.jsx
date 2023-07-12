@@ -48,20 +48,18 @@ export default function AdminProducts() {
     <>
       <Top logoUser={logoAdmin} />
       <section className="container-body-admin">
-      <aside id="aside-add">
+        <aside id="aside-add">
           <button id="btn-add-worker" onClick={handleOpenModal}>Añadir Producto</button>
           <h2>Productos</h2>
         </aside>
         <article className="container-item-admin">
-      <div className="admin-titles" id="titles-product">
-      <h2>Producto:</h2>
-      <h2>Precio:</h2>
-      <h2>Tipo:</h2>
-      </div>
-      
-      <ApiAdminProducts />
-
-      </article>
+          <div className="admin-titles" id="titles-product">
+            <h2 className="id-h2-product">Producto</h2>
+            <h2 className="id-h2-product">Precio</h2>
+            <h2>Tipo</h2>
+          </div>
+          <ApiAdminProducts />
+        </article>
       </section>
 
       {isModalOpen && (
@@ -88,8 +86,8 @@ export default function AdminProducts() {
               value={newProduct.type}
               onChange={(e) => setNewProduct({ ...newProduct, type: e.target.value })}
             >
-              <option value="desayuno">Desayuno</option>
-              <option value="almuerzo">Almuerzo</option>
+              <option value="Desayuno">Desayuno</option>
+              <option value="Almuerzo">Almuerzo</option>
             </select>
             <button onClick={handleSaveProduct}>Guardar</button>
             <button onClick={handleCloseModal}>Cancelar</button>
@@ -101,8 +99,8 @@ export default function AdminProducts() {
       <Footer
         text={
           <>
-          <Link to="/adminWorkers">
-            <Buttons id="btn-admin" text="Trabajadores" />
+            <Link to="/adminWorkers">
+              <Buttons id="btn-admin" text="Trabajadores" />
             </Link>
             <Link to="/adminProducts">
               <Buttons id="btn-admin" text="Productos" />

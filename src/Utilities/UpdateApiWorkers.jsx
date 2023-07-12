@@ -16,12 +16,8 @@ export const updateUser = async (userId, newEmail, newRole) => {
       console.log('Usuario editado correctamente');
     }
 
-    // Aquí puedes realizar alguna acción adicional después de actualizar los datos,
-    // como refrescar la lista de usuarios.
-
   } catch (error) {
     console.error('Error:', error);
   }
 
-  
 };

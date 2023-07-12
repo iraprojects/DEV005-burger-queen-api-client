@@ -87,7 +87,7 @@
     margin-bottom: 8%;
     justify-content: center;
     margin-bottom: auto;
-    padding-bottom: 2%;
+    padding-bottom: 5%;
 
 }
 
@@ -104,7 +104,7 @@
 }
 
 #titles-product {
-    gap: 18%;
+    gap: 9.5%;
 }
 
 #aside-add {
@@ -126,4 +126,21 @@
 
 #item-role {
     width: 60px;
+}
+
+.id-h2-product {
+    margin-left: 6%;
+}
+
+#id-text {
+
+}
+
+#id-price {
+    display: flex;
+    justify-content: center;
+}
+
+#id-type {
+
 }
