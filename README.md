@@ -2,7 +2,8 @@
   <img src="src/assets/logo.png" alt="Logo" width="100" height="100" align="left">
   Burger Queen (API Client)
 </h1>
-
+<br>
+<br>
 
 ## Índice
 
