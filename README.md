@@ -5,6 +5,8 @@
 <br>
 <br>
 
+# Biendenid@s al repositorio de Irazu y Giselle!
+
 ## Índice
 
 * [1. Introducción](#1-introducción)
@@ -28,6 +30,14 @@ El proyecto consiste en desarrollar la interfaz de un pequeño restaurante de ha
 La interfaz debe mostrar dos menús: uno para el desayuno y otro para el resto del día. Cada menú contiene una lista de productos con sus respectivos precios. La aplicación debe permitir a los clientes seleccionar los productos que desean agregar al pedido y mostrar un resumen del pedido en tiempo real, incluyendo el costo total.
 
 El proyecto se centra en aprender a construir una interfaz web utilizando React. Se espera familiarizarse con el concepto de estado de pantalla y cómo cada cambio en el estado se refleja en la interfaz. Además, se abordan diversos objetivos de aprendizaje relacionados con HTML, CSS, JavaScript, control de versiones y centrado en el usuario.
+
+Para ingresar a la aplicación web, utilizarla y verificar su funcionalidad, ingrese con los siguientes datos:
+
+| Rol           | Correo              | Contraseña |
+|---------------|---------------------|------------|
+| Administrador | admin@gmail.com     | 123456     |
+| Mesero        | waiter@gmail.com    | 123456     |
+| Chef          | chef@gmail.com      | 123456     |
 
 
 ## 3. Diseño
