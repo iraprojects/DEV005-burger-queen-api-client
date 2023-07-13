@@ -37,7 +37,7 @@ El proyecto se centra en aprender a construir una interfaz web utilizando React.
 En esta sección se presentan los elementos de diseño utilizados en el proyecto, incluyendo la paleta de colores y los prototipos de alta fidelidad echos en Figma.
 
 ### Paleta de colores
-<img src="src/assets/Color-Palette.png" alt="Colores" width="300" height="200">
+<img src="src/assets/Color-Palette.png" alt="Colores" width="300" height="300">
 
 ### Proitopo de alta fidelidad
 
