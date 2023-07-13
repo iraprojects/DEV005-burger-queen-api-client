@@ -143,3 +143,5 @@ Cada historia de usuario tiene su propio conjunto de criterios de aceptación y 
 
 El proyecto fue desplegado utilizando Vercel, una plataforma de despliegue que ofrece alojamiento para aplicaciones web estáticas y aplicaciones web que se ejecutan en el servidor. Vercel nos brinda características como escalabilidad automática, rendimiento optimizado y una interfaz intuitiva para facilitar la configuración y administración de los proyectos desplegados. Gracias al uso de Vercel, el despliegue del proyecto se realizó de manera eficiente y confiable.
 
+Para ver el proyecto desplegado, haz clic [aquí](https://burger-queen-client.vercel.app/).
+
