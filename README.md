@@ -12,9 +12,9 @@
 * [1. Introducción](#1-introducción)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Diseño](#3-diseño)
-* [4. Objetivos de aprendizaje](#4-objetivos-de-aprendizaje)
+* [4. Despliegue](#4-despliegue)
 * [5. Historias de usuario](#5-historias-de-usuario)
-* [6. Despliegue](#6-despliegue)
+* [6. Objetivos de aprendizaje](#6-objetivos-de-aprendizaje)
 
 ***
 
@@ -31,21 +31,13 @@ La interfaz debe mostrar dos menús: uno para el desayuno y otro para el resto d
 
 El proyecto se centra en aprender a construir una interfaz web utilizando React. Se espera familiarizarse con el concepto de estado de pantalla y cómo cada cambio en el estado se refleja en la interfaz. Además, se abordan diversos objetivos de aprendizaje relacionados con HTML, CSS, JavaScript, control de versiones y centrado en el usuario.
 
-Para ingresar a la aplicación web, utilizarla y verificar su funcionalidad, ingrese con los siguientes datos:
-
-| Rol           | Correo              | Contraseña |
-|---------------|---------------------|------------|
-| Administrador | admin@gmail.com     | 123456     |
-| Mesero        | waiter@gmail.com    | 123456     |
-| Chef          | chef@gmail.com      | 123456     |
-
 
 ## 3. Diseño
 
 En esta sección se presentan los elementos de diseño utilizados en el proyecto, incluyendo la paleta de colores y los prototipos de alta fidelidad echos en Figma.
 
 ### Paleta de colores
-![Colores](src/assets/Color-Palette.png)
+<img src="src/assets/Color-Palette.png" alt="Colores" width="300" height="300">
 
 ### Proitopo de alta fidelidad
 
@@ -63,7 +55,50 @@ En esta sección se presentan los elementos de diseño utilizados en el proyecto
 
 Para ver todas las visas de diseños mas detallados, consulta el [enlace](https://www.figma.com/file/quDom3Ke8O8h7obshj9wfW/BurgerClient?type=design&node-id=0-1&mode=design&t=DyfQMHUD65OSPXxk-0)
 
-## 4. Objetivos de aprendizaje
+
+## 4. Despliegue
+
+El proyecto fue desplegado utilizando Vercel, una plataforma de despliegue que ofrece alojamiento para aplicaciones web estáticas y aplicaciones web que se ejecutan en el servidor. Vercel nos brinda características como escalabilidad automática, rendimiento optimizado y una interfaz intuitiva para facilitar la configuración y administración de los proyectos desplegados. Gracias al uso de Vercel, el despliegue del proyecto se realizó de manera eficiente y confiable.
+
+Para ver el proyecto desplegado, haz clic [aquí](https://burger-queen-client.vercel.app/).
+
+Para ingresar a la aplicación web, utilizarla y verificar su funcionalidad, ingrese con los siguientes datos:
+
+| Rol           | Correo              | Contraseña |
+|---------------|---------------------|------------|
+| Administrador | admin@gmail.com     | 123456     |
+| Mesero        | waiter@gmail.com    | 123456     |
+| Chef          | chef@gmail.com      | 123456     |
+
+
+## 5. Historias de usuario
+
+Durante el desarrollo del proyecto, se trabajarán las siguientes historias de usuario:
+
+- #### Historia de usuario 1: Autenticación de meseros/as
+Como meserx, quiero poder ingresar al sistema de pedidos, siempre y cuando se me hayan asignado las credenciales correspondientes. Los criterios de aceptación incluyen acceder a una pantalla de login, ingresar el email y la contraseña, recibir mensajes de error comprensibles en caso de ingresar información incorrecta y poder ingresar al sistema de pedidos si las credenciales son correctas.
+
+- #### Historia de usuario 2: Toma de pedidos por parte de meseros/as
+Como meserx, quiero poder tomar el pedido de unx clientx para evitar errores, tener un registro claro de los productos seleccionados y su total, y enviar el pedido a la cocina para su preparación. Los criterios de aceptación incluyen la capacidad de anotar el nombre del clientx, agregar y eliminar productos del pedido, ver un resumen y el total de la compra, enviar el pedido a la cocina y que la aplicación sea funcional y visualmente atractiva en una tablet.
+
+- #### Historia de usuario 3: Visualización de pedidos por parte del jefe de cocina
+Como jefx de cocina, quiero poder ver los pedidos de lxs clientxs en orden y marcar aquellos que están listos para ser preparados y servidos. Además, quiero poder ver el tiempo que tomó preparar cada pedido desde que llegó hasta que se completó. Los criterios de aceptación incluyen la visualización ordenada de los pedidos, la capacidad de marcar los pedidos preparados y el registro del tiempo de preparación.
+
+- #### Historia de usuario 4: Visualización de pedidos listos para servir por parte de meseros/as
+Como meserx, quiero poder ver los pedidos que están preparados y listos para ser servidos, para poder entregarlos rápidamente a lxs clientxs correspondientes. Los criterios de aceptación incluyen la visualización de un listado de pedidos listos para servir y la capacidad de marcar los pedidos que han sido entregados.
+
+- #### Historia de usuario 5: Administración de trabajadorxs por parte del administrador/a de tienda
+Como administrador(a) de tienda, quiero poder gestionar a lxs trabajadorxs de la plataforma para mantener actualizada la información de cada unx. Los criterios de aceptación incluyen la visualización de un listado de trabajadorxs, la capacidad de agregar, eliminar y actualizar datos de lxs trabajadorxs.
+
+- #### Historia de usuario 6: Administración de productos por parte del administrador/a de tienda
+Como administrador(a) de tienda, quiero poder gestionar los productos del menú para mantenerlo actualizado. Los criterios de aceptación incluyen la visualización de un listado de productos, la capacidad de agregar, eliminar y actualizar datos de los productos.
+<br>
+<br>
+<br>
+Cada historia de usuario tiene su propio conjunto de criterios de aceptación y definición de terminado, los cuales deben cumplirse para considerar la historia completada. A lo largo del desarrollo del proyecto, se realizarán revisiones de código, pruebas unitarias, pruebas de usabilidad y despliegue de la aplicación en cada iteración, asegurando la calidad y el cumplimiento de los objetivos.
+
+
+## 6. Objetivos de aprendizaje
 
 Durante el desarrollo de este proyecto, se trabajarán y aplicarán los siguientes objetivos de aprendizaje:
 
@@ -137,37 +172,7 @@ Durante el desarrollo de este proyecto, se trabajarán y aplicarán los siguient
 
 - Planificación y ejecución de pruebas de usabilidad en distintos niveles de fidelidad de los prototipos.
 
-
+<br>
 Estos objetivos de aprendizaje proporcionarán una sólida base de conocimientos y habilidades en áreas clave como HTML, CSS, JavaScript, control de versiones, HTTP, React y manejo de datos de la API. Además, se fomentará el enfoque en el diseño de producto y la investigación para mejorar la experiencia del usuario y desarrollar prototipos efectivos. Al aplicar estos conocimientos en la construcción de la aplicación web "Burguer Queen", se logrará una combinación de teoría y práctica que fortalecerá la comprensión y las habilidades en el desarrollo de interfaces web.
 
-
-## 5. Historias de usuario
-
-Durante el desarrollo del proyecto, se trabajarán las siguientes historias de usuario:
-
-- #### Historia de usuario 1: Autenticación de meseros/as
-Como meserx, quiero poder ingresar al sistema de pedidos, siempre y cuando se me hayan asignado las credenciales correspondientes. Los criterios de aceptación incluyen acceder a una pantalla de login, ingresar el email y la contraseña, recibir mensajes de error comprensibles en caso de ingresar información incorrecta y poder ingresar al sistema de pedidos si las credenciales son correctas.
-
-- #### Historia de usuario 2: Toma de pedidos por parte de meseros/as
-Como meserx, quiero poder tomar el pedido de unx clientx para evitar errores, tener un registro claro de los productos seleccionados y su total, y enviar el pedido a la cocina para su preparación. Los criterios de aceptación incluyen la capacidad de anotar el nombre del clientx, agregar y eliminar productos del pedido, ver un resumen y el total de la compra, enviar el pedido a la cocina y que la aplicación sea funcional y visualmente atractiva en una tablet.
-
-- #### Historia de usuario 3: Visualización de pedidos por parte del jefe de cocina
-Como jefx de cocina, quiero poder ver los pedidos de lxs clientxs en orden y marcar aquellos que están listos para ser preparados y servidos. Además, quiero poder ver el tiempo que tomó preparar cada pedido desde que llegó hasta que se completó. Los criterios de aceptación incluyen la visualización ordenada de los pedidos, la capacidad de marcar los pedidos preparados y el registro del tiempo de preparación.
-
-- #### Historia de usuario 4: Visualización de pedidos listos para servir por parte de meseros/as
-Como meserx, quiero poder ver los pedidos que están preparados y listos para ser servidos, para poder entregarlos rápidamente a lxs clientxs correspondientes. Los criterios de aceptación incluyen la visualización de un listado de pedidos listos para servir y la capacidad de marcar los pedidos que han sido entregados.
-
-- #### Historia de usuario 5: Administración de trabajadorxs por parte del administrador/a de tienda
-Como administrador(a) de tienda, quiero poder gestionar a lxs trabajadorxs de la plataforma para mantener actualizada la información de cada unx. Los criterios de aceptación incluyen la visualización de un listado de trabajadorxs, la capacidad de agregar, eliminar y actualizar datos de lxs trabajadorxs.
-
-- #### Historia de usuario 6: Administración de productos por parte del administrador/a de tienda
-Como administrador(a) de tienda, quiero poder gestionar los productos del menú para mantenerlo actualizado. Los criterios de aceptación incluyen la visualización de un listado de productos, la capacidad de agregar, eliminar y actualizar datos de los productos.
-
-Cada historia de usuario tiene su propio conjunto de criterios de aceptación y definición de terminado, los cuales deben cumplirse para considerar la historia completada. A lo largo del desarrollo del proyecto, se realizarán revisiones de código, pruebas unitarias, pruebas de usabilidad y despliegue de la aplicación en cada iteración, asegurando la calidad y el cumplimiento de los objetivos.
-
-## 6. Despliegue
-
-El proyecto fue desplegado utilizando Vercel, una plataforma de despliegue que ofrece alojamiento para aplicaciones web estáticas y aplicaciones web que se ejecutan en el servidor. Vercel nos brinda características como escalabilidad automática, rendimiento optimizado y una interfaz intuitiva para facilitar la configuración y administración de los proyectos desplegados. Gracias al uso de Vercel, el despliegue del proyecto se realizó de manera eficiente y confiable.
-
-Para ver el proyecto desplegado, haz clic [aquí](https://burger-queen-client.vercel.app/).
 
