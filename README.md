@@ -29,7 +29,7 @@ La interfaz debe mostrar dos menús: uno para el desayuno y otro para el resto d
 
 El proyecto se centra en aprender a construir una interfaz web utilizando React. Se espera familiarizarse con el concepto de estado de pantalla y cómo cada cambio en el estado se refleja en la interfaz. Además, se abordan diversos objetivos de aprendizaje relacionados con HTML, CSS, JavaScript, control de versiones y centrado en el usuario.
 
-Para ingresar a la aplicación web, utilizarla y verificar su funcionalidad, ingresa a este link: Burger Queen, con los siguientes datos:
+Para ingresar a la aplicación web, utilizarla y verificar su funcionalidad, ingrese con los siguientes datos:
 
 | Rol           | Correo              | Contraseña |
 |---------------|---------------------|------------|
