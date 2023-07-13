@@ -37,7 +37,7 @@ El proyecto se centra en aprender a construir una interfaz web utilizando React.
 En esta sección se presentan los elementos de diseño utilizados en el proyecto, incluyendo la paleta de colores y los prototipos de alta fidelidad echos en Figma.
 
 ### Paleta de colores
-![Colores](src/assets/Color-Palette.png)
+![Colores](src/assets/Color-Palette.png){width=300px}
 
 ### Proitopo de alta fidelidad
 
@@ -92,6 +92,7 @@ Como administrador(a) de tienda, quiero poder gestionar a lxs trabajadorxs de la
 
 - #### Historia de usuario 6: Administración de productos por parte del administrador/a de tienda
 Como administrador(a) de tienda, quiero poder gestionar los productos del menú para mantenerlo actualizado. Los criterios de aceptación incluyen la visualización de un listado de productos, la capacidad de agregar, eliminar y actualizar datos de los productos.
+<br>
 <br>
 Cada historia de usuario tiene su propio conjunto de criterios de aceptación y definición de terminado, los cuales deben cumplirse para considerar la historia completada. A lo largo del desarrollo del proyecto, se realizarán revisiones de código, pruebas unitarias, pruebas de usabilidad y despliegue de la aplicación en cada iteración, asegurando la calidad y el cumplimiento de los objetivos.
 
