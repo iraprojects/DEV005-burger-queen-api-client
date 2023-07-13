@@ -1,5 +1,7 @@
-![Logo](src/assets/logo.png)
-# Burger Queen (API Client)
+<h1>
+  <img src="src/assets/logo.png" alt="Logo" width="100" height="100" align="left">
+  Burger Queen (API Client)
+</h1>
 
 ## Índice
 
@@ -115,22 +117,22 @@ Estos objetivos de aprendizaje proporcionarán una sólida base de conocimientos
 
 Durante el desarrollo del proyecto, se trabajarán las siguientes historias de usuario:
 
-### Historia de usuario 1: Autenticación de meseros/as
+#### Historia de usuario 1: Autenticación de meseros/as
 Como meserx, quiero poder ingresar al sistema de pedidos, siempre y cuando se me hayan asignado las credenciales correspondientes. Los criterios de aceptación incluyen acceder a una pantalla de login, ingresar el email y la contraseña, recibir mensajes de error comprensibles en caso de ingresar información incorrecta y poder ingresar al sistema de pedidos si las credenciales son correctas.
 
-### Historia de usuario 2: Toma de pedidos por parte de meseros/as
+#### Historia de usuario 2: Toma de pedidos por parte de meseros/as
 Como meserx, quiero poder tomar el pedido de unx clientx para evitar errores, tener un registro claro de los productos seleccionados y su total, y enviar el pedido a la cocina para su preparación. Los criterios de aceptación incluyen la capacidad de anotar el nombre del clientx, agregar y eliminar productos del pedido, ver un resumen y el total de la compra, enviar el pedido a la cocina y que la aplicación sea funcional y visualmente atractiva en una tablet.
 
-### Historia de usuario 3: Visualización de pedidos por parte del jefe de cocina
+#### Historia de usuario 3: Visualización de pedidos por parte del jefe de cocina
 Como jefx de cocina, quiero poder ver los pedidos de lxs clientxs en orden y marcar aquellos que están listos para ser preparados y servidos. Además, quiero poder ver el tiempo que tomó preparar cada pedido desde que llegó hasta que se completó. Los criterios de aceptación incluyen la visualización ordenada de los pedidos, la capacidad de marcar los pedidos preparados y el registro del tiempo de preparación.
 
-### Historia de usuario 4: Visualización de pedidos listos para servir por parte de meseros/as
+#### Historia de usuario 4: Visualización de pedidos listos para servir por parte de meseros/as
 Como meserx, quiero poder ver los pedidos que están preparados y listos para ser servidos, para poder entregarlos rápidamente a lxs clientxs correspondientes. Los criterios de aceptación incluyen la visualización de un listado de pedidos listos para servir y la capacidad de marcar los pedidos que han sido entregados.
 
-### Historia de usuario 5: Administración de trabajadorxs por parte del administrador/a de tienda
+#### Historia de usuario 5: Administración de trabajadorxs por parte del administrador/a de tienda
 Como administrador(a) de tienda, quiero poder gestionar a lxs trabajadorxs de la plataforma para mantener actualizada la información de cada unx. Los criterios de aceptación incluyen la visualización de un listado de trabajadorxs, la capacidad de agregar, eliminar y actualizar datos de lxs trabajadorxs.
 
-### Historia de usuario 6: Administración de productos por parte del administrador/a de tienda
+#### Historia de usuario 6: Administración de productos por parte del administrador/a de tienda
 Como administrador(a) de tienda, quiero poder gestionar los productos del menú para mantenerlo actualizado. Los criterios de aceptación incluyen la visualización de un listado de productos, la capacidad de agregar, eliminar y actualizar datos de los productos.
 
 Cada historia de usuario tiene su propio conjunto de criterios de aceptación y definición de terminado, los cuales deben cumplirse para considerar la historia completada. A lo largo del desarrollo del proyecto, se realizarán revisiones de código, pruebas unitarias, pruebas de usabilidad y despliegue de la aplicación en cada iteración, asegurando la calidad y el cumplimiento de los objetivos.
