@@ -9,7 +9,7 @@ export default function ApiOrders({ showReadyOrders, showPendingOrders, showChec
     const fetchOrders = async () => {
       const token = localStorage.getItem("accessToken");
       try {
-        const response = await fetch("http://localhost:8080/orders", {
+        const response = await fetch("https://burger-queen-api-mock-production-b29d.up.railway.app/orders", {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
@@ -36,7 +36,7 @@ export default function ApiOrders({ showReadyOrders, showPendingOrders, showChec
   const updateOrderStatus = async (orderId, newStatus) => {
     const token = localStorage.getItem("accessToken");
     try {
-      const response = await fetch(`http://localhost:8080/orders/${orderId}`, {
+      const response = await fetch(`https://burger-queen-api-mock-production-b29d.up.railway.app/orders/${orderId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

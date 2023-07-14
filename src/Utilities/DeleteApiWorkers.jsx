@@ -1,7 +1,7 @@
 export const deleteWorker = async (workerId) => {
   try {
     const token = localStorage.getItem('accessToken');
-    const response = await fetch(`http://localhost:8080/users/${workerId}`, {
+    const response = await fetch(`https://burger-queen-api-mock-production-b29d.up.railway.app/users/${workerId}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${token}`,
