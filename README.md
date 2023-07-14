@@ -64,11 +64,12 @@ Para ver el proyecto desplegado, haz clic [aquí](https://burger-queen-client.ve
 
 Para ingresar a la aplicación web, utilizarla y verificar su funcionalidad, ingrese con los siguientes datos:
 
-| Rol           | Correo              | Contraseña |
-|---------------|---------------------|------------|
-| Administrador | admin@gmail.com     | 123456     |
-| Mesero        | waiter@gmail.com    | 123456     |
-| Chef          | chef@gmail.com      | 123456     |
+| Rol           | Correo                    | Contraseña |
+|---------------|---------------------------|------------|
+| Administrador | anita.borg@systers.xyz    | 123456     |
+| Administrador | grace.hopper@systers.xyz  | 123456     |
+| Mesero        | bestmesero@systers.xyz    | 123456     |
+| Chef          | mrchefsin@systers.xyz     | 123456     |
 
 
 ## 5. Historias de usuario

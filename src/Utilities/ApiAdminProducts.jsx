@@ -8,7 +8,7 @@ export default function ApiAdminProducts() {
     const fetchProducts = async () => {
       try {
         const token = localStorage.getItem('accessToken');
-        const response = await fetch('http://localhost:8080/products', {
+        const response = await fetch('https://burger-queen-api-mock-production-b29d.up.railway.app/products', {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`,
