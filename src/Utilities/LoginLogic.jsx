@@ -8,7 +8,7 @@ function LoginLogic() {
         const { email, password } = values;
 
         try {
-            const response = await fetch('http://localhost:8080/login', {
+            const response = await fetch('https://burger-queen-api-mock-production-b29d.up.railway.app/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

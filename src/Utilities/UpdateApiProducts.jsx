@@ -1,7 +1,7 @@
 export const updateProducts = async (productId, newProduct, newPrice, newType) => {
   try {
     const token = localStorage.getItem('accessToken');
-    const response = await fetch(`http://localhost:8080/products/${productId}`, {
+    const response = await fetch(`https://burger-queen-api-mock-production-b29d.up.railway.app/products/${productId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

@@ -25,7 +25,7 @@ export default function AdminWorkers() {
 
   const handleSaveClick = async () => {
     try {
-      const response = await fetch("http://localhost:8080/users", {
+      const response = await fetch("https://burger-queen-api-mock-production-b29d.up.railway.app/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

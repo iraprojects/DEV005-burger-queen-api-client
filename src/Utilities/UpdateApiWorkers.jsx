@@ -1,7 +1,7 @@
 export const updateUser = async (userId, newEmail, newRole) => {
   try {
     const token = localStorage.getItem('accessToken');
-    const response = await fetch(`http://localhost:8080/users/${userId}`, {
+    const response = await fetch(`https://burger-queen-api-mock-production-b29d.up.railway.app/users/${userId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
