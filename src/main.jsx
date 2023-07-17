@@ -8,6 +8,8 @@ import Order from './Routes/GenerateOrder.jsx'
 import ShowOrder from './Routes/ShowOrder.jsx'
 import './index.css'
 import {createHashRouter, RouterProvider} from 'react-router-dom'
+import AdminWorkers from './Routes/AdminWorkers.jsx'
+import AdminProducts from './Routes/AdminProducts.jsx'
 
 const router = createHashRouter([
   {
@@ -29,6 +31,14 @@ const router = createHashRouter([
   {
     path: '/showOrder',
     element: <ShowOrder />
+  },
+  {
+    path: '/adminWorkers',
+    element: <AdminWorkers />
+  },
+  {
+    path: '/adminProducts',
+    element: <AdminProducts />
   }
 ])
 

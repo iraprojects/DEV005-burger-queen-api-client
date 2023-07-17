@@ -3,7 +3,6 @@ import "../styles/cheforders.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Top from "../Components/Top";
-import Orders from "../Components/Orders";
 import TitleOrders from "../Components/TitleOrders";
 import Footer from "../Components/Footer";
 import Buttons from "../Components/Button";
@@ -12,9 +11,17 @@ import ApiOrders from "../Utilities/ApiOrders";
 
 function Chef() {
   const [selectedPedido, setSelectedPedido] = useState("pedidos");
+  const [showReadyOrders, setShowReadyOrders] = useState(false);
+  const [showPendingOrders, setShowPendingOrders] = useState(false);
 
   const handlePedidoClick = (pedido) => {
     setSelectedPedido(pedido);
+  };
+
+  const handleReadyOrdersClick = () => {
+    handlePedidoClick('listos')
+    setShowReadyOrders(true);
+    setShowPendingOrders(true);
   };
 
   return (
@@ -22,16 +29,16 @@ function Chef() {
       {selectedPedido === "pedidos" ? (
         <div id="container-orders">
           <Top logoUser={logoChef} />
-          <TitleOrders />
+          <TitleOrders titleEntrega="Hora" servido="Estado"/>
           <Link to="/showOrder"> 
-            <ApiOrders />
+            <ApiOrders showPendingOrders={showPendingOrders} showBtn={true}/>
           </Link>
         </div>
       ) : (
         <div id="container-orders">
           <Top logoUser={logoChef} />
-          <TitleOrders titleEntrega="Hora Entrega"/>
-          <ApiOrders />
+          <TitleOrders id={'id-tittle-orders'} titleEntrega="Entrega" servido="Estado"/>
+          <ApiOrders showReadyOrders={showReadyOrders} />
         </div>
       )}
 
@@ -47,7 +54,8 @@ function Chef() {
             <Buttons
               id={'btn-chef'}
               text="Pedidos Listos"
-              onClick={() => handlePedidoClick('listos')}
+              // onClick={() => handlePedidoClick('listos')}
+              onClick={handleReadyOrdersClick}
               active={selectedPedido === 'listos'}
             />
           </>

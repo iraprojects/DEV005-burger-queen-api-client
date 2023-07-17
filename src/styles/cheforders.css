@@ -50,39 +50,73 @@ header {
 }
 
 #container-orders{
-    position: fixed;
-    top: 15%;
-    left: 20%;
+    margin-bottom: 8%;
+    justify-content: center;
+    margin-bottom: auto;
+    padding-bottom: 2%;    
 }
 
 .single-order{
+    /* display: flex;
+    flex-direction: row;
+    background-color: #f5f5f5;
+    justify-content: space-around;
+    border-radius: 40px;
+    width: 40rem;
+    margin-bottom: 5%;
+    border-bottom-style: outset; */
+
     display: flex;
     flex-direction: row;
-    background-color: #D9D9D9;
+    background-color: #f5f5f5;
     justify-content: space-around;
-    border-radius: 16px;
-    width: 50rem;
-    margin-bottom: 5%;
+    width: 40rem;
+    border-bottom-style: outset;
+}
+
+.single-order:active {
+    background-color: #f8e6a8;
 }
 
 #text-orders {
     color: black;
-    display: flex;
+    width: 15%;
+    text-align: left;
 }
 
 .title-orders{
-    display: flex;
+    /*  display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    color: black;
+    color: black; */
+    display: flex;
+    flex-direction: row;
+    background-color: #f5f5f54a;
+    border-radius: 16px 16px 0 0;
+    width: 40rem;
+    gap: 15.5%;
+    border-bottom-style: outset;
+    align-items: center;
+    font-size: smaller;
 }
-.title-orders > * {
+/* .title-orders > * {
     margin-top: 0;
-}
+    margin-left: 2%;
+    margin-right: 2%;
+} */
 
 #btn-chef {
     margin-top: 0%;
     width: 8rem;
     margin-right: 20%;
 }
+
+#h2-client {
+    margin-left: 5%;
+}
+#h2-status {
+    margin-left: 3.5%;;
+}
+
+
